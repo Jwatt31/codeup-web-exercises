@@ -20,8 +20,8 @@ console.log("this is my external js fail");
 
 
         //concatanation vs templet lit ex
-    let myName = "james";
-    let myAge = 30;
+let myName = "james";
+let thyAge = 30;
 
 
 
