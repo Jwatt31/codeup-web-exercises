@@ -22,7 +22,46 @@ console.log(`hello ${myname('jay', "arr")} ,'did you know 5+5 = ${sum(5,5)}'}`)
 //// anonymous function
 
 
-const decrement = function (input){
-    return input-1
-}
-console.log(decrement(5))
+//const decrement = function (input){
+ //   return input-1
+//}
+//console.log(decrement(5))
+
+/// arrow function
+
+// functions declaration
+//function myname(firstname, lastname){
+
+    //return `${firstname} ${lastname}`};
+
+//smol arrow function
+//const fullName = (firstname, lastname) => firstname + " " + lastname;
+
+//long arrow function
+
+//const fullName = (firstname, lastname) => {
+    //return firstname + " " + lastname
+//}
+//console.log(fullName('mick','myers'))
+
+// create a function that take a string and returns the string in lowercase
+let lowerCase = "hoW DoEs thIS WoRk"
+//function Lg(str){
+    //lowerCase= str.toLowerCase();
+//}
+
+//console.log(lowerCase); /// gives og text
+//Lg(lowerCase); // converts
+//console.log(lowerCase); // new text
+//const Lowercase =
+
+//arrow function
+
+const lowerCaseString = (str) => {
+    lowerCase = str.toLowerCase();
+};
+
+console.log(lowerCase);
+lowerCaseString(lowerCase);
+console.log(lowerCaseString(lowerCase));
+console.log(lowerCase);
