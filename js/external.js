@@ -7,7 +7,7 @@ alert('Welcome to my Website!');
 let Userimput = prompt('whats your favorite color')
 alert(`is this your color? ${Userimput}`)
 
-/////Promot 1 info
+/////Prompt 1 info
     //You have rented some movies for your kids: The little mermaid (for 3 days),
     // Brother Bear (for 5 days, they love it),
     // and Hercules (1 day, you don't know yet if they're going to like it).
@@ -20,7 +20,7 @@ let totalcost = ((price * brotherBear)+(price * theLittleMermaid)+(price * hercu
 console.log(totalcost);
 alert(`$${totalcost.toFixed(2)}`);
 
-/////promt 2
+/////prompt 2
     //Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
     // they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350.
     // How much will you receive in payment for this week?
@@ -28,8 +28,8 @@ alert(`$${totalcost.toFixed(2)}`);
 let googlePayment = 400;
 let amazonPayment = 380;
 let facebookPayment = 350;
-let googleHours = prompt("How many hours of work did you work for google");
-let amazonHours = prompt("How many hours of work did you work for amozon");
+let googleHours = prompt("How many hours of work did you work for Google");
+let amazonHours = prompt("How many hours of work did you work for Amazon");
 let facebookHours = prompt("How many hours of work did you work for Facebook");
 let totalPaymentG = (googlePayment * googleHours);
 let totalPaymentA = (amazonPayment * amazonHours);
