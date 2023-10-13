@@ -13,9 +13,9 @@ alert(`is this your color? ${Userimput}`)
     // and Hercules (1 day, you don't know yet if they're going to like it).
     // If price for a movie per day is $3, how much will you have to pay?
 let price = 3;
-let brotherBear = prompt("How many days would u like to rent Brother Bear");
-let theLittleMermaid = prompt("How many days would u like to rent The Little Mermaid");
-let hercules = prompt("How many days would u like to rent Hercules the animated movie");
+let brotherBear = prompt("How many days would you like to rent Brother Bear");
+let theLittleMermaid = prompt("How many days would you like to rent The Little Mermaid");
+let hercules = prompt("How many days would you like to rent Hercules the animated movie");
 let totalcost = ((price * brotherBear)+(price * theLittleMermaid)+(price * hercules));
 console.log(totalcost);
 alert(`$${totalcost.toFixed(2)}`);
@@ -40,5 +40,5 @@ console.log(totalPaymentG)
 console.log(totalPaymentA)
 console.log(totalPaymentF)
 alert('Your payment breakdown' +
-    ` Google: $${totalPaymentG}`+ ` Amazon: $${totalPaymentA}`+
-    ` Facebook: $${totalPaymentF}` + ` Total: $${totatPaymentO}`)
+    ` Google: $${totalPaymentG.toFixed(2)}`+ ` Amazon: $${totalPaymentA.toFixed(2)}`+
+    ` Facebook: $${totalPaymentF.toFixed(2)}` + ` Total: $${totatPaymentO.toFixed(2)}`)
