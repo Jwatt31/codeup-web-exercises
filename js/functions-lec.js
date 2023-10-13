@@ -83,17 +83,17 @@ console.log(greeting('greetings!'));
 
 let globalVar = "hello! My name is Globir!"
 
-function test(){
-    let localVar ='Hello, my name is Lola';
-    console.log(globalVar);
-    {
-        console.log(innervar) // won't work because it's a local var which means it won't run outside the function
-        console.log(localVar) // won't work because it's a local var which means it won't run outside the function
-    }
-    console.log(globalVar)//can be used outside and inside the function because its ID of let us outside the function
-}
-console.log(localVar) // won't work because it's a local var which means it won't run outside the function
-test();
+//function test(){
+    //let localVar ='Hello, my name is Lola';
+    //console.log(globalVar);
+    //{
+        //console.log(innervar) // won't work because it's a local var which means it won't run outside the function
+        //console.log(localVar) // won't work because it's a local var which means it won't run outside the function
+    //}
+    //console.log(globalVar)//can be used outside and inside the function because its ID of let us outside the function
+//}
+//console.log(localVar) // won't work because it's a local var which means it won't run outside the function
+//test();
 //{ } acts like an isolated function
 //////example
 //let x = 300;
