@@ -34,11 +34,12 @@ let facebookHours = prompt("How many hours of work did you work for Facebook");
 let totalPaymentG = (googlePayment * googleHours);
 let totalPaymentA = (amazonPayment * amazonHours);
 let totalPaymentF = (facebookPayment * facebookHours);
-let totatPaymentO =(totalPaymentF + totalPaymentA + totalPaymentG)
-console.log(totatPaymentO)
-console.log(totalPaymentG)
-console.log(totalPaymentA)
-console.log(totalPaymentF)
+let totatPaymentO =(totalPaymentF + totalPaymentA + totalPaymentG);
+console.log(totatPaymentO);
+console.log(totalPaymentG);
+console.log(totalPaymentA);
+console.log(totalPaymentF);
 alert('Your payment breakdown' +
     ` Google: $${totalPaymentG.toFixed(2)}`+ ` Amazon: $${totalPaymentA.toFixed(2)}`+
-    ` Facebook: $${totalPaymentF.toFixed(2)}` + ` Total: $${totatPaymentO.toFixed(2)}`)
+    ` Facebook: $${totalPaymentF.toFixed(2)}` + ` Total: $${totatPaymentO.toFixed(2)}`);
+
