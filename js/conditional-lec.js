@@ -18,7 +18,7 @@
 //     console.log("grow up")
 // }
 
-let currentDay = prompt("what day is today").toLowerCase()
+//let currentDay = prompt("what day is today").toLowerCase()
 
 // if (currentDay === 'monday' || currentDay === 'tuesday' || currentDay === 'wednesday'){
 //     console.log("i love " + currentDay)
@@ -37,12 +37,12 @@ let currentDay = prompt("what day is today").toLowerCase()
 // }
 
 
-const username = "user"
-const password = "password"
-
-// prompt the user to enter a username and a password
-const userUsername = prompt("please enter a username")
-const userPassword = prompt("please enter a password")
+// const username = "user"
+// const password = "password"
+//
+// // prompt the user to enter a username and a password
+// const userUsername = prompt("please enter a username")
+// const userPassword = prompt("please enter a password")
 
 // next i want to console. log " you are logged in" if user name and pass word match
 
@@ -58,27 +58,53 @@ const userPassword = prompt("please enter a password")
 //     console.log("unexpected error!!!!!")
 // }
 
-// nested con example
-if (username === userUsername) {
-    if (password === userPassword) {
-        console.log("logged in")
+// // nested con example
+// if (username === userUsername) {
+//     if (password === userPassword) {
+//         console.log("logged in")
+//     } else {
+//         console.log("try again this time dont miss the !#$& word")
+//     }
+// } else {
+//     console.log("You got that name wrong how do You mess up on that")
+// }
+//
+// // ternary operator
+// // ? -> represents put true condition
+// // : -> represents else condition
+// let name = "jim"
+// let greeting = (name === "bob") ? ("hello, " + name) : ("Hello stranger!");
+// console.log(greeting)
+// /// preferd way shorter but less oraganized
+// let currentCurrentDay = currentDay ==='monday'|| currentDay === 'tuesday'|| currentDay === 'wednsday' ? 'i love ' + currentDay : currentDay + "? come back later like on a monday";
+// console.log(currentCurrentDay)
+
+////switch statment is faster and readable but takes up a lot of room in the code
+// let daysOfWeek = "mondays";
+//
+// switch (daysOfWeek){
+//     case 'mondays':
+//     case 'tuesday':
+//     case 'wednesday':
+//     case 'thursday':
+//     case 'friday':
+//         console.log("its a weekday");
+//         break;
+//     case "saturday":
+//     case "sunday":
+//         console.log("its a weekend day.")
+//         break;
+//     default:
+//         console.log("invalid day of the week");
+// }
+
+// using function and if/else
+function sayHello (name) {
+    if (name.length <= 20){
+        return `hello, ${name}`
     } else {
-        console.log("try again this time dont miss the !#$& word")
+        return "thats way to long of a name can u give a nickname instead like karen. *whisper y do i always get the werid ones"
     }
-} else {
-    console.log("You got that name wrong how do You mess up on that")
 }
 
-// ternary operator
-// ? -> represents put true condition
-// : -> represents else condition
-let name = "jim"
-let greeting = (name === "bob") ? ("hello, " + name) : ("Hello stranger!");
-console.log(greeting)
-/// preferd way shorter but less oraganized
-let currentCurrentDay = currentDay ==='monday'|| currentDay === 'tuesday'|| currentDay === 'wednsday' ? 'i love ' + currentDay : currentDay + "? come back later like on a monday";
-console.log(currentCurrentDay)
-
-//switch statment
-
-switch ()
+console.log(sayHello("lassoijiiiihihiiihihiihihi"))
