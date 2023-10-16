@@ -21,24 +21,53 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+// function analyzeColor(input) {
+//     if ("blue" === input) {
+//         return "as blue as the ocean";
+//     }else {
+//     }if ("green" === input){
+//         return 'as green as the grass i dont touch';
+//     } else {
+//     }if ('red' === input){
+//         return 'lava me some red'
+//     } else {
+//         if (input) {
+//             return `the hell is ${input}`
+//         }
+//     }
+// }
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//const randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+//console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+// let analyzeColor = 'red'
+// switch (analyzeColor) {
+//     case 'blue':
+//         console.log("blue as the ocean")
+//         break
+//     case 'red':
+//         console.log("lava me some red")
+//         break
+//     case 'orange':
+//         console.log("I could go for some orange juice")
+//         break
+//     default:
+//         console.log('the hell is that')
+// }
 
 /**
  * TODO:
@@ -46,6 +75,20 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+// let analyzeColor = prompt("plz enter a color")
+// switch (analyzeColor) {
+//     case 'blue':
+//         alert("blue as the ocean")
+//         break
+//     case 'red':
+//         alert("lava me some red")
+//         break
+//     case 'orange':
+//         alert("I could go for some orange juice")
+//         break
+//     default:
+//         alert(`the hell is ${analyzeColor}`)
+// }
 
 /* ########################################################################## */
 
@@ -66,10 +109,30 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * calculateTotal(5, 100) // returns 0
  *
  * Test your function by passing it various values and checking for the expected
- * return value.
+ * return v
  */
+//0=0 1=10 2=25 3=35 4=50 5=free
+//function calculateTota (cost,discoun) {
+   // return cost - (cost * discount/100)
+//}
+function calculateTotal(luckyNumber,total)  {
+    if (luckyNumber === 0){
+        return total
+    }else if (luckyNumber === 1){
+        return total- (.10 * total)
+    }else if (luckyNumber === 2){
+        return total - (.25 * total)
+    }else if (luckyNumber === 3){
+        return total - (.35 * total)
+    }else if (luckyNumber === 4){
+        return total - (.50 * total)
+    }else if (luckyNumber === 5){
+        return "its free!!!!!!"
+    }
+}
 
-/**
+//console.log(calculateTotal(5,100))
+ /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
  * (In this line of code, 0 is inclusive, and 6 is exclusive)
@@ -77,8 +140,12 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// const luckyNumber = Math.floor(Math.random() * 6);
+ //Generate a random number between 0 and 6
+ const luckyNumber = Math.floor(Math.random() * 6);
+ prompt(userinput)
+console.log((calculateTotal(luckyNumber,prompt(`what is your total`))))
+alert(`your lucky number was ${luckyNumber}, your cost before discount${userinput}`)
+
 
 /**
  * TODO:
