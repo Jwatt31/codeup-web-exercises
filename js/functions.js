@@ -70,8 +70,9 @@ console.log(isTwo(random))
 function calculateTip(tip,bill) {
     return tip/100 * bill
 }
-
-console.log(calculateTip(20,25.50))
+//////////// dividing by 100 so that u can use whole numbers
+//add in to fixed so it doesnt add.00000000 to the end results
+console.log(calculateTip(20,25.50).toFixed(2))
 
 /**
  * TODO:
@@ -98,7 +99,7 @@ console.log(calculateTip(20,25.50))
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(originalPrice,discountPercent) {
-    return originalPrice - (originalPrice * discountPercent)
+    return originalPrice - (originalPrice * discountPercent/100)
 }
 
-console.log(applyDiscount(20,.20))
+console.log(applyDiscount(20,23).toFixed(2))
