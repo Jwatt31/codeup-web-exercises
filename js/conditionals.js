@@ -140,11 +140,11 @@ function calculateTotal(luckyNumber,total)  {
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
- //Generate a random number between 0 and 6
- const luckyNumber = Math.floor(Math.random() * 6);
- prompt(userinput)
+// Generate a random number between 0 and 6
+  const luckyNumber = Math.floor(Math.random() * 6);
+
 console.log((calculateTotal(luckyNumber,prompt(`what is your total`))))
-alert(`your lucky number was ${luckyNumber}, your cost before discount${userinput}`)
+alert(`your lucky number was ${luckyNumber}, your cost before discount${userinput} and your total after is ${calculateTotal}.`)
 
 
 /**
@@ -165,3 +165,13 @@ alert(`your lucky number was ${luckyNumber}, your cost before discount${userinpu
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+// let asknumber = confirm('would you like to enert a number')
+// if (asknumber){
+//     prompt("please enter a number from 1-100");
+// } else if parseFloat()
+// {
+//     alert( 'fine i didint want to work anyways')
+// }
+
+

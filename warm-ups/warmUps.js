@@ -13,3 +13,16 @@ const capitalizeFirstLetter = (str) => str.substring(0,1).toUpperCase() + str.su
 //const
 
 console.log(capitalizeFirstLetter("hello world"))
+
+/////oct 17 warm up find the heighest number
+
+function largestNum (in1, in2, in3){
+    return Math.max (in1, in2, in3)
+}
+
+console.log(largestNum(5,10,15))
+// function largestnum (){
+// let num1 = parsenInt(prompt('') /// repeat as needed
+// let largestNum = math.max
+// alart(
+// largestNum()
