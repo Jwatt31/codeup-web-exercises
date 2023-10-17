@@ -26,7 +26,7 @@
 //         return "as blue as the ocean";
 //     }else {
 //     }if ("green" === input){
-//         return 'as green as the grass i dont touch';
+//         return 'as green as the grass I don't touch';
 //     } else {
 //     }if ('red' === input){
 //         return 'lava me some red'
@@ -68,7 +68,7 @@
 //     default:
 //         console.log('the hell is that')
 // }
-
+////useing return instead of consol.log you dont need to put a break thats because log need to be taken out while return gives the answer
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -119,15 +119,17 @@ function calculateTotal(luckyNumber,total)  {
     if (luckyNumber === 0){
         return total
     }else if (luckyNumber === 1){
-        return total- (.10 * total)
+        return total- (.10 * total);
     }else if (luckyNumber === 2){
-        return total - (.25 * total)
+        return total - (.25 * total);
     }else if (luckyNumber === 3){
-        return total - (.35 * total)
+        return total - (.35 * total);
     }else if (luckyNumber === 4){
-        return total - (.50 * total)
+        return total - (.50 * total);
     }else if (luckyNumber === 5){
-        return "its free!!!!!!"
+        return "its free!!!!!!";
+    }else {
+        return "no sale no soup for you"
     }
 }
 
@@ -143,9 +145,9 @@ function calculateTotal(luckyNumber,total)  {
 // Generate a random number between 0 and 6
   const luckyNumber = Math.floor(Math.random() * 6);
 
-console.log((calculateTotal(luckyNumber,prompt(`what is your total`))))
-alert(`your lucky number was ${luckyNumber}, your cost before discount${userinput} and your total after is ${calculateTotal}.`)
+let userbill =prompt("What was you total")
 
+alert(`your lucky number was ${luckyNumber}`+ ` your total before ${userbill} `+ `ypur total after ${calculateTotal(luckyNumber,userbill)}`)
 
 /**
  * TODO:
@@ -165,6 +167,21 @@ alert(`your lucky number was ${luckyNumber}, your cost before discount${userinpu
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+//function asknumber() {
+    let entreNumber =confirm('enter the number plz')
+    if (entreNumber) {
+        let userNum = prompt("number?")
+        if (!isNaN(userNum)) {
+            userNum = parseFloat(userNum);
+            let evenorodd = userNum % 2 === 0 ? 'even' : 'odd';
+            alert(`the number is ${evenorodd}`)
+        } else {
+            alert (userNum =prompt("added to 100" + '${usernum}' ))
+        }
+    }
+//}
+
+
 
 // let asknumber = confirm('would you like to enert a number')
 // if (asknumber){
@@ -174,4 +191,40 @@ alert(`your lucky number was ${luckyNumber}, your cost before discount${userinpu
 //     alert( 'fine i didint want to work anyways')
 // }
 
+//
+let userCon = confirm('would u like to enter a number?')
+if (userCon){
+    let userinput = parseFloat(prompt('enter a number'))
+    if (isNaN(!userinput)){
+        alert('you didnt input a number');
+    }else {
+        alert(iseven(userinput))
+        alert(addOne(userinput))
+        alert(posNeg(userinput))
+    }
+}
 
+function iseven(num) {
+    if (num %2 === 0){
+        return 'is even'
+    } else if (num % 2 === 1) {
+        return 'is odd'
+    } else {
+        return 'is neither'
+    }
+
+}
+
+function addOne(num){
+    return `${num} + 100 is ${100+num}`
+}
+
+function posNeg(num){
+    if(num > 0){
+        return `${num} is pos `
+}else if (num < 0){
+        return `${num} is neg`
+    } else {
+        return ('not a neg or pos')
+    }
+}
