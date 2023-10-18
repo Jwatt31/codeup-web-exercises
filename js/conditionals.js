@@ -167,19 +167,19 @@ alert(`your lucky number was ${luckyNumber}`+ ` your total before ${userbill} `+
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-//function asknumber() {
-    let entreNumber =confirm('enter the number plz')
-    if (entreNumber) {
-        let userNum = prompt("number?")
-        if (!isNaN(userNum)) {
-            userNum = parseFloat(userNum);
-            let evenorodd = userNum % 2 === 0 ? 'even' : 'odd';
-            alert(`the number is ${evenorodd}`)
-        } else {
-            alert (userNum =prompt("added to 100" + '${usernum}' ))
-        }
-    }
-//}
+// //function asknumber() {
+//     let entreNumber =confirm('enter the number plz')
+//     if (entreNumber) {
+//         let userNum = prompt("number?")
+//         if (!isNaN(userNum)) {
+//             userNum = parseFloat(userNum);
+//             let evenorodd = userNum % 2 === 0 ? 'even' : 'odd';
+//             alert(`the number is ${evenorodd}`)
+//         } else {
+//             alert (userNum =prompt("added to 100" + '${usernum}' ))
+//         }
+//     }
+// //}
 
 
 
