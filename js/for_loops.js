@@ -14,9 +14,8 @@ for (let j =0 ; j < 10 ; j++ ){
     let ranNum = Math.floor(Math.random() * 180) + 20
     if (ranNum % 2 === 0){
         console.log(`${ranNum} is even`)
-    } else {
+    } else
         console.log(`${ranNum} is odd`)
-    }
 }
 
 /////////////////--------------- 4 ex
@@ -25,7 +24,15 @@ for(let i = 1; i < 10; i++ ){
     console.log(i.toString().repeat(i))
 }
 
+for (let i=1; i< 10; i++){
+    let num= ''
+    for (let j =0; j<i; j++){
+        num = num +i;
+    }
+    console.log(num);
+}
+
 ////////////////----- 5 ex
 for (let i = 100; i > 0; i -= 5){
-    console.log(i)
+    console.log(i);
 }
