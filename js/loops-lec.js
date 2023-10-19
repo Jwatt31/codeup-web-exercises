@@ -23,7 +23,7 @@
 
 /// --------------------------- mini exercise--------------
 
-let num = 0
+// let num = 0
 
 // while (num < 100){
 //     console.log(num);
@@ -44,23 +44,41 @@ let num = 0
 // } while (num < 100)
 ///// this one still ends on 100 unlike above
 
-const secretNumber =7
-let guess;
-let attempt = 0
-//do while loop
+// const secretNumber =7
+// let guess;
+// let attempt = 0
+// //do while loop
+//
+// do {
+//     guess = parseInt(prompt("guess the secret number (1-10):"));
+//     attempt++
+//     if (guess === secretNumber){
+//         console.log("you got it soup for you")
+//     } else {
+//         if (guess < secretNumber){
+//             console.log("A little low.")
+//         } else {
+//             console.log("just like these prices its too high")
+//         }
+//         console.log(`guess again or no soup for you. after ${attempt} many trys you would think you would get it `)
+//     }
+//
+// }while (guess !== secretNumber)
 
-do {
-    guess = parseInt(prompt("guess the secret number (1-10):"));
-    attempt++
-    if (guess === secretNumber){
-        console.log("you got it soup for you")
-    } else {
-        if (guess < secretNumber){
-            console.log("A little low.")
-        } else {
-            console.log("just like these prices its too high")
-        }
-        console.log(`guess again or no soup for you. after ${attempt} many trys you would think you would get it `)
-    }
+////////////////////////////-----for loops------//////////////////////////////////////////////////
+//for (/*initialization*/; /*condition*/; /*increment*/) {
+    // body
+//}
 
-}while (guess !== secretNumber)
+for (let i = 10; i <= 20; i++){
+    console.log(i)
+}
+
+for (let num  = 0; num < 100; num = num + 5 ){
+    console.log(num)
+}
+
+let hello =" hello"
+for (i=0; i <= hello.length; i++){
+    console.log(hello[i])
+}

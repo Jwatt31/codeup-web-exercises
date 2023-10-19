@@ -29,12 +29,30 @@
 
 /////// warmup oct 19
 let num = 100
-while (num -= 5) {
-    if (num % 2 === 0) {
-        console.log(`${num} even`)
-    } else console.log(num)
-}
+// while (num -= 5) {
+//     if (num % 2 === 0) {
+//         console.log(`${num} even`)
+//     } else console.log(num)
+// }
 
+// while (num >= 5) {
+//      num -=5
+//      console.log(num);
+// if (num % 2 === 0){
+// console.log('even' + num)}
+//     } else {
+//     console.log(num)
+// } //need to look over this on my own time
 
+   ////// (`${num -= 5} even`)
 
-
+// do {
+//     num -= 5
+//     if (num % 2 === 0 && num !== 0){
+//         console.log(`${num} is even`)
+//     }else {
+//         console.log(num)
+//     }
+// } while (num > 1)
+///// ^^ try to change this to a while statment can move the formula over
+////////////////////////////////////////////////
