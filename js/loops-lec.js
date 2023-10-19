@@ -91,9 +91,29 @@
 //     console.log('for loop iteration #' + ' i=' + i + ' j=' + j);
 // }///// not a common type of for
 
-//break
+//-----------break-----------//
 for (let i =0; i<100; i += 5){
     console.log(i)
-    break;
-    console.log("shipment never recived")
+    if (i === 50){
+        break;
+
+    }
+}
+console.log('trying to break')
+
+//-------continue--------//
+
+for (let i =1; i <= 5; i++){
+    if (i === 3){
+        continue; //// means skip over the true statment
+    }
+    console.log(i)
+}
+
+for (let i = 1; i < 100 ; i++){
+    if (i % 2 !== 0){ // skips odd
+    //if (i % 2 === 0){ // skips evens
+        continue; // skips odd numbers as continue is telling the function to continue even when true is
+    }
+    console.log(`here be that even number ${i}`)
 }
