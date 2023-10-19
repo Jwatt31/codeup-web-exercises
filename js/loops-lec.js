@@ -70,15 +70,30 @@
     // body
 //}
 
-for (let i = 10; i <= 20; i++){
+// for (let i = 10; i <= 20; i++){
+//     console.log(i)
+// }
+//
+// for (let num  = 0; num < 100; num = num + 5 ){
+//     console.log(num)
+// }
+//
+// let hello =" hello"
+// for ( let i = 0; i <= hello.length; i++){ // .length in this function takes out each letter so it can be seen
+//     console.log(hello[i]) // [] tells it to pull out each will go over in arrays
+//     //console.log(hello.charAt(i)) // same as the log above
+// }
+
+//for (/*initialization*/; /*condition*/; /*increment*/) {
+    // body
+//}
+// for (let i = 0, j = 100; i <= 100; i++, j--){
+//     console.log('for loop iteration #' + ' i=' + i + ' j=' + j);
+// }///// not a common type of for
+
+//break
+for (let i =0; i<100; i += 5){
     console.log(i)
-}
-
-for (let num  = 0; num < 100; num = num + 5 ){
-    console.log(num)
-}
-
-let hello =" hello"
-for (i=0; i <= hello.length; i++){
-    console.log(hello[i])
+    break;
+    console.log("shipment never recived")
 }
