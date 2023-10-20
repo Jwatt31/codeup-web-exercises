@@ -51,3 +51,44 @@ for (let element of iterable) {
 for (let num of numbers){
     console.log(num)
 }
+
+
+shapes.forEach(shapes => console.log(`here is a lovely shape: ${shapes}`));
+
+numbers.forEach(num => console.log(`this is a number in my numbers array: ${num}`));
+
+/// spread operator (...)
+// using pread operator to add elements of one array to another array
+const arr = [3,4,7]
+
+function randomNumber(min,max){
+    return Math.floor(Math.random()*(max-min +1)+ min)
+}
+const newArr = [...arr,randomNumber(23,42)];
+console.log(newArr)
+
+// usning spread operator to use the values within an array as arguments of a function
+
+const someNums = [5,41];
+
+function multiply(num1,num2) {
+    return num1 * num2;
+}
+
+console.log(multiply(...someNums))
+
+// using spread operator in a function to define a variable number of parameters
+function add(...args) {
+    let total = 0
+    for (let i = 0; i < args.length; i++) {
+        total += args[i];
+    }
+    return total;
+}
+
+// passing a various number of argument of a function
+const randNumArr1 = [55,1,58,66,65,92,6,87,71,48,36,96];
+console.log(add(...randNumArr1));
+
+const randNumberArr2 = [72,5,90,11,43,22,100,21];
+console.log(add(...randNumberArr2))
