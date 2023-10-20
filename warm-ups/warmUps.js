@@ -56,3 +56,36 @@ let num = 100
 // } while (num > 1)
 ///// ^^ try to change this to a while statment can move the formula over
 ////////////////////////////////////////////////
+
+
+
+
+//////////////////------------- warm up oct 20
+//     for (i = 100; i > 0; i--){
+//     if (i % 2 === 0){
+//         console.log(` ${i} is even `)
+//     }else {
+//         console.log(i)
+//     }
+// }
+////////
+//  function nam(i) {
+//     for (i = 100; i > 0; i-- )
+//         if (i % 2 === 0){
+//             console.log(`${i} is even`)
+//         }else {
+//         }
+//
+//  }
+//nam()
+//////////////
+ function returnEvennam() {
+     for(let i = 100; i > 0; i--){
+      if (i % 2 === 0){
+       console.log(i+ ' is even');
+      }
+
+     }
+ }
+ returnEvennam()
+///////////////////////////////////////////////////////////////////////////
