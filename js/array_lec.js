@@ -31,7 +31,7 @@ console.log(4)
 console.log(`there are ${shapes.length} in the array`)
 
 console.log(`the first shape is ${shapes[1]}`);
-console.log(`the secound shape is ${shapes[2]}}`);
+console.log(`the secound shape is ${shapes[2]}`);
 console.log(`the thrid shape is ${shapes[3]}`);
 console.log(`the fourth shape is ${shapes[0]}`);
 
