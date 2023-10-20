@@ -26,3 +26,21 @@ let removedItem = toDoList
 console.log('task complete ' + removedItem)
 console.log(removedItem)
 
+//console.log('task done '+ doneItem)
+
+let colors = ['red', 'yellow', 'green', 'red', 'white', 'blue']
+let index= colors.indexOf('green')
+console.log(index)
+
+index = colors.indexOf('red')
+
+index = colors.lastIndexOf('red')
+
+let slice = colors.slice(2,4)
+console.log(slice)
+
+slice = colors.slice(3)
+console.log(slice)
+
+
+console.log('reversing colors')
