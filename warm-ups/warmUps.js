@@ -79,13 +79,22 @@ let num = 100
 //  }
 //nam()
 //////////////
- function returnEvennam() {
-     for(let i = 100; i > 0; i--){
-      if (i % 2 === 0){
-       console.log(i+ ' is even');
-      }
-
-     }
- }
- returnEvennam()
+//  function returnEvennam() {
+//      for(let i = 100; i > 0; i--){
+//       if (i % 2 === 0){
+//        console.log(i+ ' is even');
+//       }
+//
+//      }
+//  }
+//  returnEvennam()
 ///////////////////////////////////////////////////////////////////////////
+////// oct 23
+
+let favMovie = ['To hell and back', 'Atlas cloud', 'Saving pvt ryan', 'Hercules', 'Tenacious D and the pick of destiny']
+favMovie.sort()
+// console.log(favMovie)
+// favMovie.forEach((movie)=>console.log(movie));
+
+for (const movie of favMovie) {
+}
