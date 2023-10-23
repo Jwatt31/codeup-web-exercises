@@ -27,4 +27,12 @@ let planetsArray = planetsString.split('|')
     let planetsStringJ = planetsArray.join('<br>')
     console.log(planetsStringJ)
 
+
+    // let planetsString1 = `<ul>
+    //     <li>${planetsArray.join('</li><li>')}</li>
+    // </ul>`;
+//     let planetsString1 =`<ul>
+// <li>${planetsArray.join('</li><li>')}</li>
+// </ul>`;
+//     console.log(planetsString1)
 })();
