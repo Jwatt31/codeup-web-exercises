@@ -78,11 +78,11 @@
 //     console.log(num)
 // }
 //
-// let hello =" hello"
-// for ( let i = 0; i <= hello.length; i++){ // .length in this function takes out each letter so it can be seen
-//     console.log(hello[i]) // [] tells it to pull out each will go over in arrays
-//     //console.log(hello.charAt(i)) // same as the log above
-// }
+let hello =" hello"
+for ( let i = 0; i <= hello.length; i++){ // .length in this function takes out each letter so it can be seen
+    console.log(hello[i]) // [] tells it to pull out each will go over in arrays
+    console.log(hello.charAt(i)) // same as the log above
+}
 
 //for (/*initialization*/; /*condition*/; /*increment*/) {
     // body

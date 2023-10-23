@@ -1,4 +1,4 @@
-(function() {
+
     "use strict";
 
     /**
@@ -26,10 +26,10 @@ let person = {
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-   person.sayHello = function (){
-       alert(`Hello from the year 1889 -Marty Mcfly`)
-   }
-person.sayHello()
+//    person.sayHello = function (){
+//        alert(`Hello from the year 1889 -Marty Mcfly`)
+//    }
+// person.sayHello()
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -49,6 +49,16 @@ person.sayHello()
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
+shoppers.forEach((function(shopper){
+    if (shopper.amount >= 200) {
+        let discount =shopper.amount * 0.12;
+        let discountedA = shopper.amount - discount
+        console.log(`${shopper.name} spent $${shopper.amount} after 12% your total $${discountedA.toFixed(2)} you saved $${discount.toFixed(2)}` )
+    } else {
+        console.log(`${shopper.name} no discount for you! spend more next time. Your total $${shopper.amount.toFixed(2)}`)
+    }
+}))
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -62,6 +72,32 @@ person.sayHello()
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    let books = [
+        {
+            title: 'In defence of History',
+            author: {
+                firstName: 'Richerd',
+                lastName: 'Evens',
+            }
+        },
+        {
+            title: 'Unapologetic',
+            author: {
+                firstName: 'John',
+                lastName: 'Loftus',
+            }
+        },
+        {
+            title: 'Dawn of fire gate of bones',
+            author: {
+                firstName:'Chris',
+                lastName:'Wright'
+            }
+        }
+    ]
+    console.log(books[0].title)
+    console.log(books[0].author.firstName)
+    console.log(books[1].author.lastName)
 
     /**
      * TODO:
@@ -87,7 +123,16 @@ person.sayHello()
      *      ---
      *      ...
      */
-
+    let i = 1
+books.forEach(function (books){
+    console.log(`Book # ${i++}, Title: ${books.title}, Author: ${books.author.firstName} ${books.author.lastName}`)
+})
+    // for (let i=0; i < books.length; i++){
+    //     console.log('books #')
+    //     console.log('title')
+    //     console.log('author')
+    //     console.log('---')
+    // }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -98,5 +143,25 @@ person.sayHello()
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook(title, firstName, lastName) {
+    let book={
+        title:title,
+        author:{
+            firstName:firstName,
+            lastName:lastName,
+        }
 
-})();
+    }
+      return book;
+}
+ books.push(createBook('The Great Dawn', "rance", 'timmy'))
+    function showBookInfo(book, bookNum) {
+        console.log('book#')
+        console.log()
+        console.log()
+        console.log()
+
+    }
+    for(let i=0; i<books.length; i++){
+        showBookInfo(books[i],(i+1))
+    }
