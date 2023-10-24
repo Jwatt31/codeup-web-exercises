@@ -91,10 +91,35 @@ let num = 100
 ///////////////////////////////////////////////////////////////////////////
 ////// oct 23
 
-let favMovie = ['To hell and back', 'Atlas cloud', 'Saving pvt ryan', 'Hercules', 'Tenacious D and the pick of destiny']
-favMovie.sort()
-// console.log(favMovie)
-// favMovie.forEach((movie)=>console.log(movie));
+// let favMovie = ['To hell and back', 'Atlas cloud', 'Saving pvt ryan', 'Hercules', 'Tenacious D and the pick of destiny']
+// favMovie.sort()
+// // console.log(favMovie)
+// // favMovie.forEach((movie)=>console.log(movie));
+//
+// for (const movie of favMovie) {
+// }
 
-for (const movie of favMovie) {
+
+////////////////////// oct 24
+let car = [
+    {
+        make: 'dodge',
+        model: 'journey',
+        color: 'grey'
+    },
+    {
+        make:'hyndia',
+        model: 'ionque 6',
+        color: 'green'
+    },
+    {
+        make: 'Aston Martian',
+        model: 'Vanquisher',
+        color: 'Silver',
+    }
+];
+car.forEach(car => console.log (`your NEW CAR is a ${car.color} ${car.make} ${car.model} `));
+for (const carE of car) {
+    console.log(`here is your NEW CAR!!! A beautiful ${carE.color} ${carE.make} ${carE.model}`)
+
 }

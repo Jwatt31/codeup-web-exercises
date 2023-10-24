@@ -108,3 +108,18 @@ car.model = "Camry" // use the dot method instead
 //
 // // honk the horn
 // car.honk();
+
+
+let cal = {
+    color: 'black',
+    add: function (num1,num2) {
+        return num1 + num2
+    },
+    showAnswer: function (num1,num2) {
+        console.log(`${num1} + ${num2} = ${this.add(num1, num2)}`)
+    }
+}
+console.log(cal.add(2,10))
+console.log(cal.add(4 ,18))
+cal.showAnswer(7,34)
+
