@@ -20,7 +20,8 @@
             if (doRounding === true){
                 area = Math.round(area)
             }
-            console.log("Area of a circle with radius: " + this.radius + `, is: ${area} `);
+                console.log("Area of a circle with radius: " + this.radius + `, is: ${area} `);
+
         }
     };
 
@@ -32,7 +33,7 @@
 
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
-
+circle.radius =5
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);

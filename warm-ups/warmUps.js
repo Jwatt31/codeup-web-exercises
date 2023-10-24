@@ -103,14 +103,14 @@ let num = 100
 ////////////////////// oct 24
 let car = [
     {
-        make: 'dodge',
-        model: 'journey',
-        color: 'grey'
+        make: 'Dodge',
+        model: 'Journey',
+        color: 'Grey'
     },
     {
-        make:'hyndia',
-        model: 'ionque 6',
-        color: 'green'
+        make:'Hyndia',
+        model: 'Ionque 6',
+        color: 'Green'
     },
     {
         make: 'Aston Martian',
