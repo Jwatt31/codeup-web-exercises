@@ -18,7 +18,7 @@ function noOrder(item, item2, item3) {
 console.log(noOrder('cat','dog','snake'))
 
 
-
+////// try to make a list like above with iterationg
 function Order(str) {
     let newOrder = str.split(",")
     let orderList = '<ul>'
@@ -29,3 +29,6 @@ function Order(str) {
 }
 
 console.log(Order(['cat','dog','snake']))
+
+///// try to make one with an orderd ...list method
+////// ...listiteam
