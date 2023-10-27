@@ -97,6 +97,24 @@ function capitalizeName(str) {
 console.log(capitalizeName('ron weasley')) // "Ron Weasley"
 console.log(capitalizeName('Harry Potter')) // "Harry Potter"
 console.log(capitalizeName('Nathan drake')) // "Nathan Drake"
+
+function countOdds(num) {
+    let oddsNum = 0;
+    let even = 0
+    for (let i = 0; i < num.length; i++){
+        if (num[i] % 2 !== 0){
+            oddsNum++ /// counts out the number of iterations that are true for the above statements
+            console.log(oddsNum);
+        } else if (num[i] % 2 === 0){
+            even++
+            console.log(even)
+        }
+    }
+    return oddsNum
+}
+
+console.log(countOdds([2453,83,92,1,82,73,64,56,2,4]));
+
 /////////////////------------- NOTES FOR ASSESSMENT COMPLETE
 
 // stringArr.forEach((elem) => {
