@@ -13,29 +13,32 @@
         <br>
         <label for="password"> Password</label>
         <input id="password" name="password" type="password" placeholder="Password">
+        <input type="submit">
+        <!--<button type="submit">Submit</button>-->
     </section>
     <section>
         <br>
         <p>Please give a short bio of who you are and your </p>
         <label for="bio"></label>
-        <textarea id="bio" name="bio">
+        <textarea id="bio" name="bio" placeholder="My Name is He/She/They">
 
         </textarea>
     </section>
     <section>
         <p>How did you hear about Us</p>
-        A <input  type="radio" name="How_you_heard_about_us2" value="A">Billboard <br>
-        B <input  type="radio" name="How_you_heard_about_us2" value="B">Internet advertisement<br>
+        <label for="Where_are_we_Wasting_money"></label>
+        A <input  type="radio" name="How_you_heard_about_us2" value="A" id="Where_are_we_Wasting_money">Billboard <br>
+        B <input  type="radio" name="How_you_heard_about_us2" value="B" >Internet advertisement<br>
         C <input type="radio" name="How_you_heard_about_us2" value="C">Radio Advertisement<br>
         D <input type="radio" name="How_you_heard_about_us1" value="D">Other<br>
         <br>
         <p>What is the web browser you are using</p>
-        <select name="Your_web_Browser">
-            <option value="Chrome">Chrome </option>
-            <option value="FireFox">FireFox </option>
-            <option value="Safari">Safari</option>
-            <option value="Internet Explorer">Internet Explorer</option>
-
+        <label for="Your_Web"></label>
+        <select name="Your_web_Browser" id="Your_Web">
+            <option value="Chrome" >Chrome </option>
+            <option value="FireFox" >FireFox </option>
+            <option value="Safari" >Safari</option>
+            <option value="Internet Explorer" >Internet Explorer</option>
         </select>
     </section>
 </form>
