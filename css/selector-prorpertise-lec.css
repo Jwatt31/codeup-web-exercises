@@ -1,0 +1,72 @@
+/*
+select element by name(element name*/
+h1 {
+    color: red;
+    /*text-align: center;*/
+
+}
+
+/*calling elemet by id*/
+#header2 {
+    color: darkblue;
+
+}
+/*calling the id by the class name*/
+.content{
+    background-color: dimgray;
+}
+/*you can combine elements*/
+h1,.content{ /*must be seperated by a comma to target both h1 and then any with content as a class*/
+    font-weight: lighter; /*lighter makes bold smaller but not to the og size of font*/
+}
+
+.fancy-header{
+    font-family: cursive;
+}
+
+.extra-large{
+    color: red;
+}
+/*descendent selector*/
+/*#container h1 { !*this will only apply to the 2 tags marked in it  so it wont change anyithing that doesint apply to contaner and h1 *!
+    color: blue;
+}*/
+
+/*direct-child selector*/
+#container>p {
+    background-color: #abc;
+}
+
+/*combine selectors*/
+h1.content{ /* this will ignore the h1 at the top but not the parent element on line 31 */
+    color: yellow;
+    text-indent: 50px; /*this will be stopped by the above because we already centered it */
+}
+/*change color to red if not visited*/
+a:link {
+    color: red;
+}
+
+/*visited change to black */
+a:visited{
+    color: black;
+}
+
+/*mouse hover over link */
+a:hover{
+    color:gold;
+    font-size: 25px;
+}
+
+/* active/ selected link*/
+a:active{
+    color: green;
+}
+#color{
+    /*color: brown;*/
+    /*color: rgb(250,200,100)*//*rgb = red 255, green 200, blue 100, *//*this gives the full spectrum of color based on the rgb range of colors 2 diffrent way to find the colors this is 1 */
+    color: #4477c2;/*this is the other way to do the above *//* you can also right click the box */
+    text-decoration: underline;
+    text-align: center;
+    font-family: Helvetica,sans-serif;
+}
