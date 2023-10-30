@@ -1,0 +1,9 @@
+/*external css styling ////PREFER METHOD /////*/
+
+strong {
+    color: pink;
+}
+#unique{ /*# is to call ID */
+    background: black;
+    color: aliceblue;
+}
