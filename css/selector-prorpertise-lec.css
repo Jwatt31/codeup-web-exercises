@@ -77,7 +77,7 @@ a:active{
 
 html{
 
-    background-image: url(https://www.gardenhealth.com/wp-content/uploads/2019/09/hedgehog_octobergardeningjobs-768x768.webp) ;
+    background-image: url("../image/Great_Sucsess.jpg") /*url(https://www.gardenhealth.com/wp-content/uploads/2019/09/hedgehog_octobergardeningjobs-768x768.webp)*/ ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
