@@ -125,3 +125,43 @@ console.log(countOdds([2453,83,92,1,82,73,64,56,2,4]));
 let names = name
 
 console.log(names)
+
+
+function checkNumber(input) {
+     if (input < 0){
+         return true
+     } else if (input > 0 ){
+         return false
+
+     }else {
+         return 0
+     }
+}
+
+console.log(checkNumber(0))
+
+function getGrade(Score) {
+     if (Score >= 90 && Score <= 100 ){
+         return "A"
+     }else if (Score >= 80 && Score <= 89){
+         return "B"
+     }else if (Score >= 70 && Score <= 79){
+         return "C"
+     }else if (Score >= 60 && Score <= 69){
+         return "D"
+     }else {
+         return "Failed"
+     }
+
+}
+
+console.log(getGrade(89))
+console.log(getGrade(57))
+console.log(getGrade(90))
+console.log(getGrade(77))
+
+
+let numberArray = [12,45,3,757,86,]
+function filterNumbers(numbers) {
+
+}
