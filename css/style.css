@@ -1,16 +1,47 @@
 
 .fancy-header {
-    color: purple; /* single line comment */
+    color: lightgoldenrodyellow; /* single line comment */
     text-decoration: underline;
     text-align: center;
 }
 
 h2{
-    color: dimgray;
+    color: #7FFFD4FF;
     text-decoration: underline;
 }
 
 html{
     background-color: aquamarine ;
-    background-image: url("..image/our_parent-company.jpg");
+    background-image: url("../image/our-company.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: IBM Plex Mono;
+}
+ul{
+    list-style: lower-greek;
+}
+td{
+    border: aquamarine solid 3px;
+}
+tr{
+    font-size: 20px;
+    color: burlywood;
+}
+a:visited{
+    color: dimgray;
+}
+a:hover{
+    color: whitesmoke;
+    font-size: 20px;
+}
+a:link{
+    color: green;
+}
+a:active{
+    color: black;
+}
+i{
+    color: white;
+    text-decoration: underline cadetblue;
 }
