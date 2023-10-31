@@ -24,8 +24,12 @@ ul{
 td{
     border: aquamarine solid 3px;
 }
-tr{
+table{
     font-size: 20px;
+    padding: 15px;
+    width: 100%;
+}
+tr{
     color: burlywood;
 }
 a:visited{
