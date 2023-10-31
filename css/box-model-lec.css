@@ -1,37 +1,60 @@
-/*div{
-    width: ;
-    height: ;
-
+div{
+    width: 300px;/*weidth and height are the content themselves*/
+    height: 150px;
+    background: red;
 }
 
 #one {
-    padding:;
-    border:;
-}*/
+    padding:30px;/*padding is the content from the border*/
+    border:5px dashed sandybrown;
+    margin-bottom: 10px; /*margin is normally set at 0 and is the space between elements */
+}
 
-/*
 #two{
-    padding:;
-    border:;
-} Padding
-*/
+    padding:10px 50px;
+    border:3px dashed;
+}
 
-
-
-
-
-/*#three{
+#three{
     padding: 5px 30px 40px;
-    border: ;
+    border: solid white;
     margin: 50px 5px 50px 50px
-}*/
+
+}
 
 h1{
     margin-bottom: 30px;
     border: 3px solid red;
 }
 button{
-    padding: 10px 25px;
+    border: 3px dashed cornflowerblue;
+    /*width: 120px;*/
+    /*height: 75px;*/
+    padding: 10px 20px;
     text-align: center;
-    background: green;
+    background-color: forestgreen;
+    margin-bottom: 100px;
+    color: white;
+    font-size: 50px;}
+
+.box{
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.box p{
+    font-size: 24px;
+    border: 3px  solid blue;
+}
+
+.box span{
+    font-size: 18px;
+    margin: 40px;
+    background-color: #aabbcc;
+    padding: 10px;
+    border: 3px  solid brown;
+    margin-left: 50px;
 }
