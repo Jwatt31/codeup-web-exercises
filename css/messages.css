@@ -5,46 +5,64 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-.message-info{
-    background-color: #cddeff;
-    color: #4477c2;
-    margin: .5em 400px .5em 400px;
-    padding: 5px;
-    font-family: Jost, sans-serif;
+.message{
+    margin: 8px;
     border: 2px solid lightgray;
-    border-radius: 8px;
+    padding: .5em;
+    border-radius: 4px;
+    font-family: Jost, sans-serif
+}
+
+.message-info{
+    /*background-color: #cddeff;*/ color: var(--text-info);/*altenate version shorter */
+    /*color: #4477c2;*/background-color: var(--bg-info);
+   /* margin: .5em 400px .5em 400px;
+    padding: 5px;*/
+   /* font-family: Jost, sans-serif;*/
+   /* border: 2px solid lightgray;*/
+   /* border-radius: 4px;*/
 
 
 }
 .message-success{
-    margin: .5em 400px .5em 400px;
-    background-color: #cff3da ;
-    color:#4d986b;
-    padding: 5px;
-    font-family: Jost, sans-serif;
-    border: 2px solid lightgray;
-    border-radius: 8px;
+    /*margin: .5em 400px .5em 400px;*/
+    /*background-color: #cff3da ;*/background-color: var(--bg-success);
+    /*color:#4d986b;*/color: var(--text-success);
+   /* padding: 5px;*/
+    /*font-family: Jost, sans-serif;*/
+    /*border: 2px solid lightgray;*/
+    /*border-radius: 4px;*/
 
 }
 
 .message-warning{
-    margin: .5em 400px .5em 400px;
-    background-color: #fcfbc9;
-    color:#c2b76a;
-    padding: 5px;
-    font-family: Jost, sans-serif;;
-    border: 2px solid lightgray;
-    border-radius: 8px;
+    /*margin: .5em 400px .5em 400px;*/
+    /*background-color: #fcfbc9;*/background-color: var(--bg-warning);
+    /*color:#c2b76a;*/color: var(--text-warning);
+    /*padding: 5px;*/
+    /*font-family: Jost, sans-serif;;*/
+    /*border: 2px solid lightgray;*/
+    /*border-radius: 4px;*/
 
 }
 
 .message-error{
-    margin: .5em 400px .5em 400px;
-    background-color: #fad3d7 ;
-    color: #9e4258;
-    padding: 5px;
-    font-family: Jost, sans-serif;
-    border: 2px solid lightgray;
-    border-radius: 8px;
+    /*margin: .5em 400px .5em 400px;*/
+    /*background-color: #fad3d78*/ ;background-color: var(--bg-error);
+    /*color: #9e4258; */ color: var(--text-error);
+   /* padding: 5px;*/
+    /*font-family: Jost, sans-serif*/;
+    /*border: 2px solid lightgray;*/
+    /*border-radius: 4px;*/
 
+}
+:root{
+    --text-info: #6362b3;
+    --bg-info: #ccdeff;
+    --text-success: #3f8c5d;
+    --bg-success: #cff3da;
+    --text-warning:#c2b76a ;
+    --bg-warning:#fcfbc9 ;
+    --text-error:#9e4258 ;
+    --bg-error:#fad3d7  ;
 }
