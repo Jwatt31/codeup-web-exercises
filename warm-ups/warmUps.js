@@ -44,7 +44,7 @@ let num = 100
 //     console.log(num)
 // } //need to look over this on my own time
 
-   ////// (`${num -= 5} even`)
+////// (`${num -= 5} even`)
 
 // do {
 //     num -= 5
@@ -56,8 +56,6 @@ let num = 100
 // } while (num > 1)
 ///// ^^ try to change this to a while statment can move the formula over
 ////////////////////////////////////////////////
-
-
 
 
 //////////////////------------- warm up oct 20
@@ -108,7 +106,7 @@ let car = [
         color: 'Grey'
     },
     {
-        make:'Hyndia',
+        make: 'Hyndia',
         model: 'Ionque 6',
         color: 'Green'
     },
@@ -118,8 +116,83 @@ let car = [
         color: 'Silver',
     }
 ];
-car.forEach(car => console.log (`your NEW CAR is a ${car.color} ${car.make} ${car.model} `));
+car.forEach(car => console.log(`your NEW CAR is a ${car.color} ${car.make} ${car.model} `));
 for (const carE of car) {
     console.log(`here is your NEW CAR!!! A beautiful ${carE.color} ${carE.make} ${carE.model}`)
 
 }
+//Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
+
+// Data Structure/Example Input:
+let developers = [
+    {
+        name: "Jonathan",
+        languages: {
+            frontend: ["HTML", "JavaScript", "CSS"],
+            backend: ["Java"]
+        }
+    },
+    {
+        name: "Bonnie",
+        languages: {
+            frontend: ["JavaScript"],
+            backend: []
+        }
+    },
+    {
+        name: "Raj",
+        languages: {
+            frontend: [],
+            backend: ["C#", "Java", "Python"]
+        }
+    },
+    {
+        name: "Carmen",
+        languages: {
+            frontend: ["JavaScript", "HTML", "CSS", "React"],
+            backend: ["C#", "Java", "Python", "TypeScript"]
+        }
+    },
+]
+
+
+// function peopleWhoKnow(people) {
+//     let newArray= []
+//     for (let i = 0; i < people.length; i++) {
+//         if (people[i].languages.frontend.includes('javascript')){
+//             newArray
+//         }
+//
+//     }
+// }
+
+function peopleWhoKnow(people) {
+    let newArray = []
+    people.forEach((dev) => {
+        if (dev.languages.frontend.includes('JavaScript')) {
+            newArray.push(dev.name);
+        } else {
+            return 'no des'
+        }
+
+    })
+    return newArray;
+}
+
+console.log(peopleWhoKnow(developers))
+
+let knowsJS = (arr) => {
+    let javaScriptDevs = [];
+    for (let i = 0; i < arr.length; i++) {
+        //console.log(arr[i])
+        for (let j = 0; j < arr[i].languages.frontend.length; j++) {
+            if (arr[i].languages.frontend[j] === 'JavaScript') {
+                javaScriptDevs.push(arr[i].name)
+            }
+        }
+
+    }
+    return javaScriptDevs;
+}
+console.log(knowsJS(developers))
+
