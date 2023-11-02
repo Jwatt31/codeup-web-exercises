@@ -196,3 +196,53 @@ let knowsJS = (arr) => {
 }
 console.log(knowsJS(developers))
 
+
+
+
+let elements = [
+    {
+        el: "button",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Submit"
+    },
+    {
+        el: "p",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Our company is better at doing company things than your company."
+    },
+    {
+        el: "h2",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Welcome Back!"
+    }
+];
+
+function findElements(input) {
+    let sum = [];
+    for (let i = 0; i < input.length; i++) {
+       if (input[i].style.backgroundColor){
+           sum.push(input[i].el, input[i].style.backgroundColor, input[i].style.color)
+       }
+
+    }
+    return sum
+}
+function changeObjects(input, bgcolor, txtcolor) {
+    for (let i = 0; i < input.length; i++) {
+        input[i].style.backgroundColor = bgcolor;
+        input[i].style.color = txtcolor; ///by adding an input u can make a new variable in the object list under style
+    }
+    return input
+
+}
+
+console.log(changeObjects(elements,'green','blue'))
