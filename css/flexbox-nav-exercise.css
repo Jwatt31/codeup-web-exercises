@@ -1,0 +1,57 @@
+html {
+    box-sizing: border-box;
+
+
+}
+body {
+    flex-direction: row;
+
+}
+div{
+    flex-direction: row
+
+}
+nav {
+    background: brown;
+
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+.navbar a {
+    text-decoration: #847477;
+    color: white;
+    font-family: "Lao MN";
+    display: inline-block;
+    margin: auto;
+    /*padding: 10px;*/
+}
+.navbar a:hover {
+    background: black;
+
+}
+.navbar li{
+    text-decoration: #847477;
+    color: white;
+    font-family: "IBM Plex Mono", sans-serif;
+    display: inline-block;
+    /*margin: auto;*/
+}
+a:hover{
+    color: #4477c2;
+}
+.logo{
+    text-underline-color: #333333;
+    /*margin: 3em;*/
+}
+#about{
+    display: flex;
+    justify-self: flex-start;
+
+    /*margin-left: auto;*/
+}

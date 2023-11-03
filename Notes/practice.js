@@ -114,18 +114,18 @@
 // console.log(names)
 
 
-// function checkNumber(input) {
-//      if (input < 0){
-//          return true
-//      } else if (input > 0 ){
-//          return false
-//
-//      }else {
-//          return 0
-//      }
-// }
+function checkNumber(input) {
+     if (input < 0){
+         return true
+     } else if (input > 0 ){
+         return false
 
-// console.log(checkNumber(0))
+     }else {
+         return 0
+     }
+}
+
+console.log(checkNumber(-5))
 //
 // function getGrade(Score) {
 //      if (Score >= 90 && Score <= 100 ){
@@ -148,30 +148,30 @@
 // console.log(getGrade(77))
 
 
-let numberArray = [12, 45, 3, 757, 86,] //filter numbers by divisables 3 and 5
-function filterNumbers(numbers) {
-    let result = []
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
-            result.push(numbers[i])
-        }
-    }
-    return result
-
-}
-
-console.log(filterNumbers(numberArray))
-
-function calAreaOfRec(height, width) {
-    if (height <= 0 || width <= 0) {
-        return "plz enter positive and not 0 nombers"
-    } else {
-        return height * width
-    }
-
-}
-
-console.log(calAreaOfRec(69, 24))
+// let numberArray = [12, 45, 3, 757, 86,] //filter numbers by divisables 3 and 5
+// function filterNumbers(numbers) {
+//     let result = []
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
+//             result.push(numbers[i])
+//         }
+//     }
+//     return result
+//
+// }
+//
+// console.log(filterNumbers(numberArray))
+//
+// function calAreaOfRec(height, width) {
+//     if (height <= 0 || width <= 0) {
+//         return "plz enter positive and not 0 nombers"
+//     } else {
+//         return height * width
+//     }
+//
+// }
+//
+// console.log(calAreaOfRec(69, 24))
 
 // find largets number in an array of numbers
 function largestNum(number) {
@@ -191,45 +191,68 @@ function largestNum(number) {
     }
 
 }
-
+//
 let theseNums = [28, 759, 3, 84, 593, 484, 382, 284, 3, 2, 5, 22, 3, 23]
-//console.log(largestNum(theseNums))
+console.log(largestNum(theseNums))
 
 // find the avrage of a array of numbers
-function avgArraSum(nums) {
-    if (nums === 0){ /// if problem asks for a null value
-        return null;
-    }else{
-        let sum = 0
-        for (let i = 0; i < nums.length; i++) {
-                sum += nums[i];
-            }
-        return sum / nums.length;
+// function avgArraSum(nums) {
+//     if (nums === 0){ /// if problem asks for a null value
+//         return null;
+//     }else{
+//         let sum = 0
+//         for (let i = 0; i < nums.length; i++) {
+//                 sum += nums[i];
+//             }
+//         return sum / nums.length;
+//
+//         }
+//
+//
+// }
 
-        }
-
-
-}
-
-console.log(avgArraSum(theseNums))
-let sentice = 'will the real slim shady please stand up'
-// count vowles in a string of and returns the number of vowles in it
-function countVowles(str) {
-    let newstr = 0
-    for (let i = 0; i < str.length; i++) {
-        if (str.charAt(i)==='a' ||str.charAt(i)=== 'e' || str.charAt(i)==='o' || str.charAt(i)==='i' || str.charAt(i)==='u'){
-            newstr++
-        }
-    }
-    return newstr
-}
-
-console.log(countVowles(sentice))
+// console.log(avgArraSum(theseNums))
+// let sentice = 'will the real slim shady please stand up'
+// // count vowles in a string of and returns the number of vowles in it
+// function countVowles(str) {
+//     let newstr = 0
+//     for (let i = 0; i < str.length; i++) {
+//         if (str.charAt(i)==='a' ||str.charAt(i)=== 'e' || str.charAt(i)==='o' || str.charAt(i)==='i' || str.charAt(i)==='u'){
+//             newstr++
+//         }
+//     }
+//     return newstr
+// }
+//
+// console.log(countVowles(sentice))
 
 //reverse the string
-function reverseStr(str) {
-    return str.split('').reverse().join("")
+// function reverseStr(str) {
+//     return str.split('').reverse().join("")
+// }
+//
+// console.log(reverseStr(sentice))
+
+let persons=[
+    {name: 'adam', age: 30},
+    {name: 'bill', age: 23},
+    {name: 'chris', age: 35},
+    {name: 'ann', age: 8},
+    {name: 'kyle', age: 12}
+]
+
+//using the person chart above id whos an audlt based on age
+function isAdult(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].name.age <= 18){
+            console.log( `${arr[i].name} arent adults`)
+        }else{
+            return 'they are adults'
+        }
+
+    }
+    return arr[i]
+
 }
 
-console.log(reverseStr(sentice))
-
+console.log(isAdult(persons))

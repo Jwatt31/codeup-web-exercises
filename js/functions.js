@@ -100,6 +100,6 @@ console.log(calculateTip(20,25.50).toFixed(2))
  */
 function applyDiscount(originalPrice,discountPercent) {
     return originalPrice - (originalPrice * discountPercent/100)
-}
+}d
 
 console.log(applyDiscount(20,23).toFixed(2))
