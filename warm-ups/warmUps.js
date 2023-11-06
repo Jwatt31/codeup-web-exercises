@@ -166,83 +166,100 @@ let developers = [
 //     }
 // }
 
-function peopleWhoKnow(people) {
-    let newArray = []
-    people.forEach((dev) => {
-        if (dev.languages.frontend.includes('JavaScript')) {
-            newArray.push(dev.name);
-        } else {
-            return 'no des'
-        }
+// function peopleWhoKnow(people) {
+//     let newArray = []
+//     people.forEach((dev) => {
+//         if (dev.languages.frontend.includes('JavaScript')) {
+//             newArray.push(dev.name);
+//         } else {
+//             return 'no des'
+//         }
+//
+//     })
+//     return newArray;
+// }
+//
+// console.log(peopleWhoKnow(developers))
+//
+// let knowsJS = (arr) => {
+//     let javaScriptDevs = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         //console.log(arr[i])
+//         for (let j = 0; j < arr[i].languages.frontend.length; j++) {
+//             if (arr[i].languages.frontend[j] === 'JavaScript') {
+//                 javaScriptDevs.push(arr[i].name)
+//             }
+//         }
+//
+//     }
+//     return javaScriptDevs;
+// }
+// console.log(knowsJS(developers))
+//
+//
+//
+//
+// let elements = [
+//     {
+//         el: "button",
+//         style: {
+//             backgroundColor: "white",
+//             el: "p",
+//             style: {
+//                 backgroundColor: "white",
+//                 color: "black"
+//             },
+//             content: "Our company is better at doing company things than your company."
+//         },
+//     {
+//         el: "h2",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Welcome Back!"
+//     }
+// ];            color: "black"
+//         },
+//         content: "Submit"
+//     },
+//     {
+//
 
-    })
-    return newArray;
+// function findElements(input) {
+//     let sum = [];
+//     for (let i = 0; i < input.length; i++) {
+//        if (input[i].style.backgroundColor){
+//            sum.push(input[i].el, input[i].style.backgroundColor, input[i].style.color)
+//        }
+//
+//     }
+//     return sum
+// }
+// function changeObjects(input, bgcolor, txtcolor) {
+//     for (let i = 0; i < input.length; i++) {
+//         input[i].style.backgroundColor = bgcolor;
+//         input[i].style.color = txtcolor; ///by adding an input u can make a new variable in the object list under style
+//     }
+//     return input
+//
+// }
+//
+// console.log(changeObjects(elements,'green','blue'))
+
+//make a function called fizzbuzz that says fizz for multiples of 3 and buzz for multiples of 5 and fizzbuzz fror multiples of both
+
+for (let i = 0; i < 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');
+    } else if (i % 5 === 0) {
+        console.log('buzz');
+    } else if (i % 3 === 0) {
+        console.log('Fizz')
+    }else {
+        console.log(i)
+    }
 }
 
-console.log(peopleWhoKnow(developers))
-
-let knowsJS = (arr) => {
-    let javaScriptDevs = [];
-    for (let i = 0; i < arr.length; i++) {
-        //console.log(arr[i])
-        for (let j = 0; j < arr[i].languages.frontend.length; j++) {
-            if (arr[i].languages.frontend[j] === 'JavaScript') {
-                javaScriptDevs.push(arr[i].name)
-            }
-        }
-
-    }
-    return javaScriptDevs;
-}
-console.log(knowsJS(developers))
-
-
-
-
-let elements = [
-    {
-        el: "button",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Submit"
-    },
-    {
-        el: "p",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Our company is better at doing company things than your company."
-    },
-    {
-        el: "h2",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Welcome Back!"
-    }
-];
-
-function findElements(input) {
-    let sum = [];
-    for (let i = 0; i < input.length; i++) {
-       if (input[i].style.backgroundColor){
-           sum.push(input[i].el, input[i].style.backgroundColor, input[i].style.color)
-       }
-
-    }
-    return sum
-}
-function changeObjects(input, bgcolor, txtcolor) {
-    for (let i = 0; i < input.length; i++) {
-        input[i].style.backgroundColor = bgcolor;
-        input[i].style.color = txtcolor; ///by adding an input u can make a new variable in the object list under style
-    }
-    return input
-
-}
-
-console.log(changeObjects(elements,'green','blue'))
+// (i % 3=== 0 && i % 5=== 0 ){
+//     console.log('FizzBuzz')
