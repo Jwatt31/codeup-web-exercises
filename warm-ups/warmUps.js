@@ -99,61 +99,61 @@ let num = 100
 
 
 ////////////////////// oct 24
-let car = [
-    {
-        make: 'Dodge',
-        model: 'Journey',
-        color: 'Grey'
-    },
-    {
-        make: 'Hyndia',
-        model: 'Ionque 6',
-        color: 'Green'
-    },
-    {
-        make: 'Aston Martian',
-        model: 'Vanquisher',
-        color: 'Silver',
-    }
-];
-car.forEach(car => console.log(`your NEW CAR is a ${car.color} ${car.make} ${car.model} `));
-for (const carE of car) {
-    console.log(`here is your NEW CAR!!! A beautiful ${carE.color} ${carE.make} ${carE.model}`)
-
-}
-//Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
-
-// Data Structure/Example Input:
-let developers = [
-    {
-        name: "Jonathan",
-        languages: {
-            frontend: ["HTML", "JavaScript", "CSS"],
-            backend: ["Java"]
-        }
-    },
-    {
-        name: "Bonnie",
-        languages: {
-            frontend: ["JavaScript"],
-            backend: []
-        }
-    },
-    {
-        name: "Raj",
-        languages: {
-            frontend: [],
-            backend: ["C#", "Java", "Python"]
-        }
-    },
-    {
-        name: "Carmen",
-        languages: {
-            frontend: ["JavaScript", "HTML", "CSS", "React"],
-            backend: ["C#", "Java", "Python", "TypeScript"]
-        }
-    },
-]
+// let car = [
+//     {
+//         make: 'Dodge',
+//         model: 'Journey',
+//         color: 'Grey'
+//     },
+//     {
+//         make: 'Hyndia',
+//         model: 'Ionque 6',
+//         color: 'Green'
+//     },
+//     {
+//         make: 'Aston Martian',
+//         model: 'Vanquisher',
+//         color: 'Silver',
+//     }
+// ];
+// car.forEach(car => console.log(`your NEW CAR is a ${car.color} ${car.make} ${car.model} `));
+// for (const carE of car) {
+//     console.log(`here is your NEW CAR!!! A beautiful ${carE.color} ${carE.make} ${carE.model}`)
+//
+// }
+// //Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
+//
+// // Data Structure/Example Input:
+// let developers = [
+//     {
+//         name: "Jonathan",
+//         languages: {
+//             frontend: ["HTML", "JavaScript", "CSS"],
+//             backend: ["Java"]
+//         }
+//     },
+//     {
+//         name: "Bonnie",
+//         languages: {
+//             frontend: ["JavaScript"],
+//             backend: []
+//         }
+//     },
+//     {
+//         name: "Raj",
+//         languages: {
+//             frontend: [],
+//             backend: ["C#", "Java", "Python"]
+//         }
+//     },
+//     {
+//         name: "Carmen",
+//         languages: {
+//             frontend: ["JavaScript", "HTML", "CSS", "React"],
+//             backend: ["C#", "Java", "Python", "TypeScript"]
+//         }
+//     },
+// ]
 
 
 // function peopleWhoKnow(people) {
@@ -249,17 +249,17 @@ let developers = [
 
 //make a function called fizzbuzz that says fizz for multiples of 3 and buzz for multiples of 5 and fizzbuzz fror multiples of both
 
-for (let i = 0; i < 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log('FizzBuzz');
-    } else if (i % 5 === 0) {
-        console.log('buzz');
-    } else if (i % 3 === 0) {
-        console.log('Fizz')
-    }else {
-        console.log(i)
-    }
-}
+// for (let i = 0; i < 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log('FizzBuzz');
+//     } else if (i % 5 === 0) {
+//         console.log('buzz');
+//     } else if (i % 3 === 0) {
+//         console.log('Fizz')
+//     }else {
+//         console.log(i)
+//     }
+// }
 
 // (i % 3=== 0 && i % 5=== 0 ){
 //     console.log('FizzBuzz')

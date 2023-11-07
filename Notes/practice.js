@@ -233,26 +233,42 @@ console.log(largestNum(theseNums))
 //
 // console.log(reverseStr(sentice))
 
-let persons=[
-    {name: 'adam', age: 30},
-    {name: 'bill', age: 23},
-    {name: 'chris', age: 35},
-    {name: 'ann', age: 8},
-    {name: 'kyle', age: 12}
-]
-
-//using the person chart above id whos an audlt based on age
-function isAdult(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].name.age <= 18){
-            console.log( `${arr[i].name} arent adults`)
-        }else{
-            return 'they are adults'
-        }
-
-    }
-    return arr[i]
-
-}
-
-console.log(isAdult(persons))
+// let persons=[
+//     {name: 'adam', age: 30},
+//     {name: 'bill', age: 23},
+//     {name: 'chris', age: 35},
+//     {name: 'ann', age: 8},
+//     {name: 'kyle', age: 12}
+// ]
+//
+// //using the person chart above id whos an audlt based on age
+// function isAdult(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].name.age <= 18){
+//             console.log( `${arr[i].name} arent adults`)
+//         }else{
+//             return 'they are adults'
+//         }
+//
+//     }
+//     return arr[i]
+//
+// }
+//
+// console.log(isAdult(persons))
+//
+////find largest ni=umber
+// function largstNum(input) {
+//     let sum= 0
+//     for (let i = 0; i < input.length; i++) {
+//         sum += input[i]
+//         if (input[i] === 0 ){
+//             return null
+//         }else if (input[i]  sum){
+//             return sum
+//
+//         }
+//
+//     }
+//
+// }
