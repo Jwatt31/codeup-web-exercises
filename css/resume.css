@@ -1,0 +1,27 @@
+body{
+    background-color: #e3dddd;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media screen and (max-width:500px)  {
+    #myinfo{
+        display: flex;
+        text-align: center;
+    }
+    
+}
+#Dprojects{
+    list-style: none;
+}
+h3{
+    color: #1969B2;
+    text-decoration: underline;
+}
+.job{
+    color: #3f8c5d;
+}
