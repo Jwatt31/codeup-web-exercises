@@ -1,10 +1,16 @@
-#navbarTogglerDemo01{
+.text-center{
     display: flex;
-    position: relative;
-    align-content: center;
+    flex-direction: column;
+    width: 75%;
+    background-image: url("../image/pizza.png");
+    height: 346px;
+    background-size: cover;
+    justify-content: center;
+    position: absolute;
+    right: 8em;
+    text-align: center;
 }
-/*.d-flex{*/
-/*    display: flex;*/
-/*    right: 55%;*/
-/*    position: relative;*/
-/*}*/
+#welcome{
+    height: 50px;
+}
+
