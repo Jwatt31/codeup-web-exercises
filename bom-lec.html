@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bom lec</title>
+</head>
+<body>
+<!--nots mess around-->
+<script>
+    <!--  returns window width-->
+    /*it just measures the white space*/
+    // console.log(window.innerWidth)
+    // console.log(window.innerHeight)
+    /*the window in the lower statment isnt needed as windows already knows*/
+    // window.confirm('would u like to confirm')
+
+    'use strict';
+
+    // this code will produce a console log every second
+    // when count >= max, the interval is cancelled, and the logging will stop
+
+    let count = 0;
+    let max = 10;
+    let interval = 1000; // interval time in milliseconds
+
+    // const intervalId = setInterval( () => {
+    //     if (count >= max) {
+    //         clearInterval(intervalId);
+    //         console.log('All done');
+    //     } else {
+    //         count++;
+    //         console.log('Repeating this line ' + count);
+    //     }
+    // }, interval);
+    /*this keeps running until u clear it with clear interval  on line 28*/
+//     below is the above in reguler function
+    let intervalId = setInterval(function(){
+        if (count >= max) {
+            clearInterval(intervalId);
+            console.log('All done');
+        } else {
+            count++;
+            console.log('Repeating this line ' + count);
+        }
+    },interval)
+//     you can replace interval with the millasecounds 5000 = 5sec but then it wont stopp
+
+    const delay = 5000; // delay time in milliseconds
+
+    // const timeoutId = setTimeout(() => alert('Here is a delayed hello!'), delay);
+
+/*as above so below */
+
+    let timeoutId=setTimeout(function (){
+        alert('Here is a delayed hello!')
+    },delay)
+    clearTimeout(timeoutId)/*this stops the above*/
+    // to cancel the timeout, you can call
+    // clearTimeout(timeoutId);
+    // prior to the delay expiring
+
+    // let hello= setTimeout(function () {
+    //     alert('here')
+    //     location= 'https://codeup-curriculum.web.app/curriculum/java/3.0.1/javascript-2/bom'
+    // },3000) /*this will send you to the code up websight*/
+    /*you can also use location.Reload to reset the page*/
+
+
+
+</script>
+
+</body>
+</html>
