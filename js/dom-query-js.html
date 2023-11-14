@@ -50,15 +50,13 @@
                 listItems[i].setAttribute('style','color:gray');
             }
         }
+
         // TODO: Set text color of li with dbid = 1 to blue
         listItems[0].setAttribute('style','color:blue')
-
-        for (let i = 0; i < listItems.length; i++) {
-            let dbid
+        /*different way shown*/
+        if (listItems[i].getAttribute('data-dbid')===1) {
+            listItems[i].setAttribute('style','color: blue')
         }
-
-
-
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         const subParagraphs = document.getElementsByClassName('sub-paragraph');
 

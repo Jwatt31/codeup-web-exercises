@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attributes and css in js</title>
+</head>
+<body>
+<header>
+    <h1>Attributes and CSS in JS</h1>
+</header>
+<script>
+<!--    usning innerHTMl-->
+    let hearder=document.querySelector('header');
+    console.log(hearder.innerHTML);
+    hearder.innerHTML='<h1>the uses of innerhtml!</h1>'+'<p>you can and set html with innerhtml</p>';
+    // using innerText this will only change the taged parts
+    document.querySelector('h1').innerText = 'i control the inner text '
+</script>
+
+</body>
+</html>
