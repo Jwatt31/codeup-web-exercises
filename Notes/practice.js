@@ -114,18 +114,18 @@
 // console.log(names)
 
 
-function checkNumber(input) {
-     if (input < 0){
-         return true
-     } else if (input > 0 ){
-         return false
-
-     }else {
-         return 0
-     }
-}
-
-console.log(checkNumber(-5))
+// function checkNumber(input) {
+//      if (input < 0){
+//          return true
+//      } else if (input > 0 ){
+//          return false
+//
+//      }else {
+//          return 0
+//      }
+// }
+//
+// console.log(checkNumber(-5))
 //
 // function getGrade(Score) {
 //      if (Score >= 90 && Score <= 100 ){
@@ -174,26 +174,26 @@ console.log(checkNumber(-5))
 // console.log(calAreaOfRec(69, 24))
 
 // find largets number in an array of numbers
-function largestNum(number) {
-    if (number.length === 0) {
-        return null;
-    } else {
-        let largestNum2 = number[0] ///this must be above
-        for (let i = 0; i < number.length; i++) {
-
-            if (number[i] > largestNum2) {
-                largestNum2 = number[i];
-
-            }
-
-        }
-        return largestNum2;
-    }
-
-}
+// function largestNum(number) {
+//     if (number.length === 0) {
+//         return null;
+//     } else {
+//         let largestNum2 = number[0] ///this must be above
+//         for (let i = 0; i < number.length; i++) {
 //
-let theseNums = [28, 759, 3, 84, 593, 484, 382, 284, 3, 2, 5, 22, 3, 23]
-console.log(largestNum(theseNums))
+//             if (number[i] > largestNum2) {
+//                 largestNum2 = number[i];
+//
+//             }
+//
+//         }
+//         return largestNum2;
+//     }
+//
+// }
+// //
+// let theseNums = [28, 759, 3, 84, 593, 484, 382, 284, 3, 2, 5, 22, 3, 23]
+// console.log(largestNum(theseNums))
 
 // find the avrage of a array of numbers
 // function avgArraSum(nums) {
@@ -272,3 +272,16 @@ console.log(largestNum(theseNums))
 //     }
 //
 // }
+
+/*random color gen*/
+function changecolor() {
+    let letters = '0123456789ABCDEF';
+    let color="#";
+    for (let i = 0; i < 6; i++) {
+        color +=
+            letters[Math.floor(Math.random()* 16)];
+    }
+    return color
+}
+let randomcolor=changecolor();
+console.log(randomcolor)

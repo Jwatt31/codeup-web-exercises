@@ -5,8 +5,29 @@
     <title>Dom event</title>
 </head>
 <body>
+<h1 id="codeup">Hello Codeup</h1>
+<h1 id="on">Hello enter</h1>
+<h1 id="off">leave</h1>
+
 <button id="btn1">Click Me!</button>
 <button id="btn2">Remove Event Listener</button>
+
+<form>
+    <label htmlFor="textField">Type something:</label><br>
+    <input type="text" id="textField" name="textField" placeholder="Type Here">
+</form>
+<div class="myBox"></div>
+<div class="myBox"></div>
+<div class="myBox"></div>
+<div class="myBox"></div>
+<style>
+.myBox {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+</style>
 <script>
     'use strict';
 
@@ -25,6 +46,48 @@
 
     // register an event listener on button two
     button2.addEventListener('click', remover);
+//     single click ex
+
+    // document.querySelector('#codeup').addEventListener("click", () => alert('h1 with id "codeup" was clicked') );
+// Db Click
+//     document.querySelector('#codeup').addEventListener('dblclick', () => alert('h1 with the id of "codeup" was double clicked!'));
+
+//     mouse enter ex
+    document.querySelector( '#on' ).addEventListener('mouseenter', function() {
+        console.log("entering " + this);
+    });
+
+//     mouse leave
+    document.querySelector( "#off" ).addEventListener('mouseleave', function() {
+        console.log("leaving " + this);
+    });
+/// Key events
+                /*Key Down*/
+    // document.querySelector('#textField').addEventListener('keydown', () => alert('A key was pushed down!') );
+
+                  /*key press*/
+    // document.querySelector('#textField').addEventListener('keypress', () => alert('A key was pressed down!') );
+
+                  /*Key Up*/
+    document.querySelector('#textField').addEventListener('keyup', () => alert('A key was released!') );
+
+                    /*event target should give us what key was pressed*/
+    // const myKeyPressFunction = event => console.log(`key pressed: ${event.key}`);
+    // document.querySelector("#textField").addEventListener('keypress', myKeyPressFunction);
+
+
+    const myKeyPressFunction = e => { /* Use 'e' or event */
+        console.log(`key pressed: ${e.key}`);
+        console.log(e.target);
+    }
+
+    document.querySelector("#textField").removeEventListener('keypress', myKeyPressFunction);
+
+    document.querySelectorAll(".myBox").forEach( box => {
+        box.addEventListener('mouseenter', ()=> console.log('mouse entered box!'));
+    });
+
+
 </script>
 </body>
 </html>

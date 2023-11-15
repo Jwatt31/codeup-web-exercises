@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>konami code</title>
+    <!--Use and empty array to hold the users inputs using .push method -->
+</head>
+<body>
+<!--text box -->
+<div id="Enter">
+    <p>Enter a code to see what you win</p>
+    <input type="text" Code="" id="Konami">
+</div>
+<style>
+#Enter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: solid 3px black;
+    height: 150px;
+}
+#Konami{
+    color: #FFFFFF;
+}
+</style>
+<script>
+    "use strict";
+
+    document.addEventListener("keyup", event => console.log(event.key));
+
+    let userCode=[]
+    let konamiCode= ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a',`Enter`]
+
+    document.querySelector('#Konami').addEventListener('keydown', function (event) {
+        userCode.push(event.key);
+        userCode= userCode.slice(-konamiCode.length);
+        if (userCode.length === konamiCode.length){
+            console.log('you win')
+        } else
+        (userCode.length !== konamiCode.length){
+            console.log('no fun for u')
+        }
+
+    } });
+
+
+</script>
+
+</body>
+</html>
