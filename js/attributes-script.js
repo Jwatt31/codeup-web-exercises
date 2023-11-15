@@ -19,9 +19,13 @@ function myTimer() {
         newColorB.textContent = 'The best lama to ever lama as old as the incas as strong as carl wheezer and as wise as ultra lord all bow to your new lord and savior LAMA LAMASONS'
     }, 6000)
 
-    setInterval(function () {
-        let colorCard = document.getElementById("profile-card")
-        colorCard.classList.toggle('background-color')
-    }, interval)
+    // setInterval(function () {
+    //     let colorCard = document.getElementById("profile-card")
+    //     colorCard.classList.toggle('background-color')
+    // }, interval)
 }
 myTimer()
+
+function getRandomcolor() {
+    count
+}
