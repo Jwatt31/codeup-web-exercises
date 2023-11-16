@@ -32,16 +32,20 @@
 
     let userCode=[]
     let konamiCode= ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a',`Enter`]
+    let userAttempt= 0;
 
     document.querySelector('#Konami').addEventListener('keydown', function (event) {
         userCode.push(event.key);
         userCode= userCode.slice(-konamiCode.length);
         if (userCode.length === konamiCode.length){
             console.log('you win')
-        } else
-        (userCode.length !== konamiCode.length){
+            userAttempt=0;
+        } else {
+            userAttempt++
+        (userCode.length !== konamiCode.length);{
             console.log('no fun for u')
         }
+        if (userAttempt=11)
 
     } });
 
