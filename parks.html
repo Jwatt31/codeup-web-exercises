@@ -105,22 +105,41 @@
         }
     })
     /*On Click make bold*/
-    let makeBold = document.querySelectorAll('h3')/* all is needed to grad all the taged H3 elemts*/
-    /*query selector All returns a node list*/
-    function listBold() {
-        let factList = this.nextElementSibling.children
-        for (let i = 0; i < factList.length; i++) {
-            factList[i].style.fontWeight = 'bold'
+    // let makeBold = document.querySelectorAll('h3')/* all is needed to grad all the taged H3 elemts*/
+    // /*query selector All returns a node list*/
+    // function listBold() {
+    //     let factList = this.nextElementSibling.children
+    //     for (let i = 0; i < factList.length; i++) {
+    //         factList[i].style.fontWeight = 'bold'
+    //
+    //     }
+    // }
+    //
+    // makeBold.forEach(function (listItem) {
+    //     listItem.addEventListener('click', listBold)
+    // })
 
-        }
+
+    /*examlpe*/
+    let listItems = document.querySelectorAll("li")
+    let h3s = document.querySelectorAll("h3")
+
+    for (const h3 of h3s) {
+        h3.addEventListener('click', function () {
+            let lis = this.nextElementSibling.children;
+            for (let li of lis) {
+                li.style.fontWeight = 'bold';
+            }
+        })
     }
-
-    makeBold.forEach(function (listItem) {
-        listItem.addEventListener('click', listBold)
-    })
     /*CLick on the li to make first elect blue*/
 
-        document.getElementsByTagName("ul").
+    for (const listItem of listItems) {
+        listItem.addEventListener('click', function (){
+            this.parentElement.firstElementChild.style.color='blue'
+        })/*going to go up to go to the first elemet */
+
+    }
 
 </script>
 
