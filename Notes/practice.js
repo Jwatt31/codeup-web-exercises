@@ -285,3 +285,17 @@ function changecolor() {
 }
 let randomcolor=changecolor();
 console.log(randomcolor)
+
+/*code for coffee project */
+function updateCoffees() {
+    const selectedRoast = roastSelection.value.toLowerCase();
+    const searchTerm = userTexts.value.trim().toLowerCase();
+
+    const filteredCoffees = coffees.filter(coffee => {
+        const matchesRoast = coffee.roast.toLowerCase() === selectedRoast || selectedRoast === 'all';
+        const matchesSearch = coffee.name.toLowerCase().includes(searchTerm);
+        return matchesRoast && matchesSearch;
+    });
+
+    coffeesList.innerHTML = renderCoffees(filteredCoffees);
+}const userTexts = document.querySelector('#userText');
