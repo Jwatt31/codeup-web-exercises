@@ -86,37 +86,50 @@ In simpler terms:
     <title>Title</title>
 </head>
 <body>
+<form id="searchForm">
+    who's fighting today
+    <br>
+    <input type="text" id="searchBar" placeholder="Choose your pokemon!">
+    <input type="submit" id="searchButton" value="Search">
+
+</form>
+
+<div class="container">
+
+</div>
+<p class="books"></p>
+<img src="">
 
 
 <script>
 
-    /*basic fatch request is direct/ fetch returns a promise*/
-    /**/
-    let smething = fetch("https://pokeapi.co/api/v2/pokemon/")/*this is in a json format*/
+    /*/!*basic fatch request is direct/ fetch returns a promise*!/
+    /!**!/
+    let smething = fetch("https://pokeapi.co/api/v2/pokemon/")/!*this is in a json format*!/
         // console.log(something)
-        /*how do we get the data back see below this gives us a response after */
+        /!*how do we get the data back see below this gives us a response after *!/
         .then(function (response) {
-            return response.json()/*adding .json to it will pull */
-        })/*allways close the .then method*/
-        .then(function (data) {/*the above has to be return to use data*/
+            return response.json()/!*adding .json to it will pull *!/
+        })/!*allways close the .then method*!/
+        .then(function (data) {/!*the above has to be return to use data*!/
             console.log(data)
         })
-    // .catch(error => console.log('Error'+error)/*make this the standard function*/
+    // .catch(error => console.log('Error'+error)/!*make this the standard function*!/
     //     .finally(console.log('this will run no matter what'))
 
 
-    /*example of how callback functions and arrow functions cleans up the code nicely*/
+    /!*example of how callback functions and arrow functions cleans up the code nicely*!/
     let something = fetch("https://pokeapi.co/api/v2/pokemon/")
         .then(response => response.json())
         .then(data => data)
-        .catch(error => console.log('Error' + error))/*.catch will show if something is wrong. implies that if im making a fetch request and it fails it will CATCH that and inform me and run the error*/
-        .finally(console.log('this will run no matter what'))/*.finally means takes and action*/
-    /*no matter if an error occurs .finally will always run*/
+        .catch(error => console.log('Error' + error))/!*.catch will show if something is wrong. implies that if im making a fetch request and it fails it will CATCH that and inform me and run the error*!/
+        .finally(console.log('this will run no matter what'))/!*.finally means takes and action*!/
+    /!*no matter if an error occurs .finally will always run*!/
 
-    /*fetch request if */
+    /!*fetch request if *!/
     fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
         .then( response => {
-            if (!response.ok) {/*if ! mean if it failed then return the log*/
+            if (!response.ok) {/!*if ! mean if it failed then return the log*!/
                 console.log("Failed!");
             }
             return response.json();
@@ -128,7 +141,7 @@ In simpler terms:
         })
         .finally( () => console.log("This function always runs!"));
 
-    /*show async behavior in action*/
+    /!*show async behavior in action*!/
     console.log(1)
 
     fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
@@ -136,9 +149,9 @@ In simpler terms:
             console.log(2)
             return (response.json())
         })
-        .then (data => console.log(data))/*because this is outside the function its going to run before log 2 and come back because it takes longer to load so its dont hold up the rest of the code*/
+        .then (data => console.log(data))/!*because this is outside the function its going to run before log 2 and come back because it takes longer to load so its dont hold up the rest of the code*!/
 console.log(3)
-    /*posting it in the database of the url*//*must creat new function for it*/
+    /!*posting it in the database of the url*!//!*must creat new function for it*!/
     const options ={
         method: 'GET',
         headers: {'content-type': 'application/json'},
@@ -148,39 +161,87 @@ console.log(3)
             console.log(2)
             return (response.json())
         })
-        .then (data => console.log(data));
+        .then (data => console.log(data));*/
 
     /**/
 
-    const githubPromise = fetch('https://api.github.com/repositories');
-    const bitbucketPromise = fetch('https://api.bitbucket.org/2.0/repositories');
+    //  const githubPromise = fetch('https://api.github.com/repositories');
+    //  const bitbucketPromise = fetch('https://api.bitbucket.org/2.0/repositories');
+    //
+    //  Promise.all([githubPromise, bitbucketPromise])/*promise.all gives u all promise.race */
+    //      .then( response => {
+    //          // here data is an array of the resolved values from each promise
+    //          // we can now do something with both pieces of data
+    //          const [githubData, bitbucketdata] = response;
+    //
+    //          console.log('github data', githubData)
+    //          console.log('bitbucket data', bitbucketdata)
+    //      })
+    //      .catch( error => {
+    //          // handle errors
+    //      });
+    //
+    //      /*chaining Ajax*/
+    //
+    // /* fetch('https://api.github.com/users')
+    //      .then(response => response.json())
+    //      .then(users => {
+    //          users.forEach( user => {
+    // log each user's username (or login property)
+    //         console.log(user.login);
+    //     })
+    // })
+    // .catch(error => console.error(error));*/
 
-    Promise.all([githubPromise, bitbucketPromise])/*promise.all gives u all promise.race */
-        .then( response => {
-            // here data is an array of the resolved values from each promise
-            // we can now do something with both pieces of data
-            const [githubData, bitbucketdata] = response;
+    // let getWeight = fetch('https://pokeapi.co/api/v2/pokemon/rattata')
+    //     .then(response => response.json())
+    //     .then(data => {/*need to add {} if you want to add  more than one outcome */
+    //         console.log(data.height);
+    //         console.log(data.weight);
+    //     })
 
-            console.log('github data', githubData)
-            console.log('bitbucket data', bitbucketdata)
-        })
-        .catch( error => {
-            // handle errors
-        });
+    function onFailed(error) {
+        console.log(error)
+    }
 
-        /*chaining Ajax*/
 
-    fetch('https://api.github.com/users')
-        .then(response => response.json())
-        .then(users => {
-            users.forEach( user => {
-                // log each user's username (or login property)
-                console.log(user.login);
+    /*create a search */
+    let searchForm = document.querySelector('#searchForm')
+    // let searchBar = document.querySelector('#searchBar').value
+
+    searchForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        let input =  document.querySelector('#searchBar').value
+        // console.log(`${input} no its clafairy`)
+
+        fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
+            .then(res => res.json())
+            .then(data =>{
+                // console.log(data.name)
+                const paragraph = document.createElement('p');
+                paragraph.innerHTML = data.name;
+                let container = document.querySelector('.container')
+                container.appendChild(paragraph)
+
+                /*image*/
+                const image = document.createElement('img')
+                image.src =data.sprites.front_shiny
+                container.appendChild(image)
+
             })
-        })
-        .catch(error => console.error(error));
+            .catch(onFailed)
+    })
 
 
+    function processBooks(book) {
+        for (let i = 0; i < book.length; i++) {
+            document.querySelector('.books').innerText += book[i].title + '\n'
+
+        }
+    }
+fetch("data/data.json")
+    .then(res=> res.json())
+    .then(data=> processBooks(data))
 
 
 
