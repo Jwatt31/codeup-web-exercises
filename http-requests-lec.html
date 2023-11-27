@@ -92,15 +92,95 @@ In simpler terms:
 
     /*basic fatch request is direct/ fetch returns a promise*/
     /**/
-    let something = fetch("https://pokeapi.co/api/v2/pokemon/")/*this is in a json format*/
-    // console.log(something)
-    /*how do we get the data back see below this gives us a response after */
-        .then(function (response){
+    let smething = fetch("https://pokeapi.co/api/v2/pokemon/")/*this is in a json format*/
+        // console.log(something)
+        /*how do we get the data back see below this gives us a response after */
+        .then(function (response) {
             return response.json()/*adding .json to it will pull */
-        })
-        .then(function (data){/*the above has to be return to use data*/
+        })/*allways close the .then method*/
+        .then(function (data) {/*the above has to be return to use data*/
             console.log(data)
         })
+    // .catch(error => console.log('Error'+error)/*make this the standard function*/
+    //     .finally(console.log('this will run no matter what'))
+
+
+    /*example of how callback functions and arrow functions cleans up the code nicely*/
+    let something = fetch("https://pokeapi.co/api/v2/pokemon/")
+        .then(response => response.json())
+        .then(data => data)
+        .catch(error => console.log('Error' + error))/*.catch will show if something is wrong. implies that if im making a fetch request and it fails it will CATCH that and inform me and run the error*/
+        .finally(console.log('this will run no matter what'))/*.finally means takes and action*/
+    /*no matter if an error occurs .finally will always run*/
+
+    /*fetch request if */
+    fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+        .then( response => {
+            if (!response.ok) {/*if ! mean if it failed then return the log*/
+                console.log("Failed!");
+            }
+            return response.json();
+        })
+        .then( data => console.log("At last, we have the JSON data we want: " + data))
+        .catch( error => {
+            console.log("ERROR!!!");
+            console.log("Error message: " + error.message);
+        })
+        .finally( () => console.log("This function always runs!"));
+
+    /*show async behavior in action*/
+    console.log(1)
+
+    fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+        .then(response => {
+            console.log(2)
+            return (response.json())
+        })
+        .then (data => console.log(data))/*because this is outside the function its going to run before log 2 and come back because it takes longer to load so its dont hold up the rest of the code*/
+console.log(3)
+    /*posting it in the database of the url*//*must creat new function for it*/
+    const options ={
+        method: 'GET',
+        headers: {'content-type': 'application/json'},
+    }
+    fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur",options)
+        .then(response => {
+            console.log(2)
+            return (response.json())
+        })
+        .then (data => console.log(data));
+
+    /**/
+
+    const githubPromise = fetch('https://api.github.com/repositories');
+    const bitbucketPromise = fetch('https://api.bitbucket.org/2.0/repositories');
+
+    Promise.all([githubPromise, bitbucketPromise])/*promise.all gives u all promise.race */
+        .then( response => {
+            // here data is an array of the resolved values from each promise
+            // we can now do something with both pieces of data
+            const [githubData, bitbucketdata] = response;
+
+            console.log('github data', githubData)
+            console.log('bitbucket data', bitbucketdata)
+        })
+        .catch( error => {
+            // handle errors
+        });
+
+        /*chaining Ajax*/
+
+    fetch('https://api.github.com/users')
+        .then(response => response.json())
+        .then(users => {
+            users.forEach( user => {
+                // log each user's username (or login property)
+                console.log(user.login);
+            })
+        })
+        .catch(error => console.error(error));
+
+
 
 
 
