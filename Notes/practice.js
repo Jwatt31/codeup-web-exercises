@@ -274,28 +274,145 @@
 // }
 
 /*random color gen*/
-function changecolor() {
-    let letters = '0123456789ABCDEF';
-    let color="#";
-    for (let i = 0; i < 6; i++) {
-        color +=
-            letters[Math.floor(Math.random()* 16)];
-    }
-    return color
+// function changecolor() {
+//     let letters = '0123456789ABCDEF';
+//     let color="#";
+//     for (let i = 0; i < 6; i++) {
+//         color +=
+//             letters[Math.floor(Math.random()* 16)];
+//     }
+//     return color
+// }
+// let randomcolor=changecolor();
+// console.log(randomcolor)
+//
+// /*code for coffee project */
+// function updateCoffees() {
+//     const selectedRoast = roastSelection.value.toLowerCase();
+//     const searchTerm = userTexts.value.trim().toLowerCase();
+//
+//     const filteredCoffees = coffees.filter(coffee => {
+//         const matchesRoast = coffee.roast.toLowerCase() === selectedRoast || selectedRoast === 'all';
+//         const matchesSearch = coffee.name.toLowerCase().includes(searchTerm);
+//         return matchesRoast && matchesSearch;
+//     });
+//
+//     coffeesList.innerHTML = renderCoffees(filteredCoffees);
+// }const userTexts = document.querySelector('#userText');
+//
+//
+//
+// /*solving */
+//
+// let uppercaseSpan = document.getElementById(uppercase)
+// let lowercaseSpan = document.getElementById(lowercase)
+// uppercaseSpan.addEventListener("mouseover", function () {
+//     lowercaseSpan.textContent = uppercaseSpan.textContent.toLowerCase()
+// })
+// uppercaseSpan.addEventListener("mouseout", function () {
+//     lowercaseSpan.textContent = uppercaseSpan.textContent.toLowerCase()
+// })
+//
+// // q4
+// /*count up by 1 sec while on the page*/
+// let counterspan =document.getElementById('counter');
+// let sec =0
+// let intervalId = setInterval(
+//     function (){
+//     sec++
+// },1000)
+//
+// // q5
+//
+//
+//
+// /*q2 test*/
+//
+// let btnGetImput =document.querySelector('#getInput')
+// let textImput =document.querySelector('#userInput')
+// let showImput =document.querySelector('#showInput')
+//
+// btnGetImput.addEventListener('click', function () {
+//     showImput.html= textImput.value
+// })
+//
+// /*q3*/
+//
+// let hotPink = document.querySelector('#Changs')
+//
+// hotPink.addEventListener("mouseenter", function () {
+//     hotPink.style.color ='hotpink';
+// })
+//
+// /*Q5*/
+//
+// let newPAraBtn = document.querySelector('#newparagraph')
+// let parent = document.querySelector('#moreparagraph')
+//
+// newPAraBtn.addEventListener('click', function () {
+//     const pData ='Lorem'
+//     const newP =document.createElement('p')
+//     newP.innerHTML =pData
+//     parent.appendChild()
+// })
+//
+// /*Q6*/
+// let bigSmall = document.querySelector('big-small')
+//
+// bigSmall.addEventListener('mouseenter',function () {
+//     bigSmall.classList.toggle('go-big')
+// })
+//
+// /*Q7*/
+// setTimeout( ()=>{
+//     let mainheading =document.querySelector('header')
+//     let newpara =document.createElement('p')
+//     newpara.innerHTML ='documentasdf'
+//     mainheading.appendChild(newpara)
+// },3000)
+// /*Q8*/
+//
+// /*Q9*/
+// let last =document.querySelector("ul:first-child li:last-child button")/*this to target the first list and the last */
+//
+// last.addEventListener('click', function () {
+//     let h2E = document.querySelectorAll('h2')
+//     h2E.forEach(()=>{
+//         setInterval(()=> {
+//             if h2.stale.display === 'none'{
+//                 h2.stale.display = 'block'
+//             } else {
+//                 h2.stale.display = 'none'
+//             }
+//         },1000)
+//     });
+// })
+// /*Q10*/
+//
+// let btnB =document.querySelectorAll('ul li button')
+// let textsC =document.querySelectorAll('ul li p')
+//
+// for (let i = 0; i < btnB.length; i++) {
+//     btnB[i].addEventListener('click', function () {
+//         textsC[i].innerText= 'you changed bobby'
+//     })
+// }
+//
+//
+/*take in an arry and return its sum*/
+// let arry= [1,2,3,4,5,6,2134,6345,62,124,2346,]
+//
+// function newarry (x) {
+//     let sum = 0
+//     for (let i = 0; i < x.length; i++) {
+//         sum += x[i]
+//     }
+//     return sum
+// }
+//
+// console.log(newarry(arry))
+/*takes in a string and returns it reversed*/
+function nuwString(x) {
+    let words = x.split('')
+
 }
-let randomcolor=changecolor();
-console.log(randomcolor)
-
-/*code for coffee project */
-function updateCoffees() {
-    const selectedRoast = roastSelection.value.toLowerCase();
-    const searchTerm = userTexts.value.trim().toLowerCase();
-
-    const filteredCoffees = coffees.filter(coffee => {
-        const matchesRoast = coffee.roast.toLowerCase() === selectedRoast || selectedRoast === 'all';
-        const matchesSearch = coffee.name.toLowerCase().includes(searchTerm);
-        return matchesRoast && matchesSearch;
-    });
-
-    coffeesList.innerHTML = renderCoffees(filteredCoffees);
-}const userTexts = document.querySelector('#userText');

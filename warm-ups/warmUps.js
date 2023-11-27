@@ -263,3 +263,4 @@ let num = 100
 
 // (i % 3=== 0 && i % 5=== 0 ){
 //     console.log('FizzBuzz')
+
