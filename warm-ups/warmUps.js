@@ -264,3 +264,17 @@ let num = 100
 // (i % 3=== 0 && i % 5=== 0 ){
 //     console.log('FizzBuzz')
 
+//nov 28 2023 warm up
+ let imgs = document.querySelector('.image')
+// let newpara = document.querySelector('#Pokemon')/*adding anything to the div will replace the img*/
+
+fetch(`https://pokeapi.co/api/v2/pokemon/onix`)
+.then(res => res.json())
+.then(data => {
+    imgs.src =data.sprites.front_shiny/*i can put this directly to the imgage class because its an image */
+
+})
+
+let onix = document.querySelector('#answer')
+let
+
