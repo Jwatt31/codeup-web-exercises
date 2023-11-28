@@ -12,6 +12,23 @@ searchForm.addEventListener('submit', (event) => {
 
 fetch(`https://api.github.com/users/Jwatt31/events/public`)
     .then(res => res.json())
-    .then(data =>{
+    .then(data => {
         console.log(data)
+    })
+
+function getLAstCommit(username, token) {
+    return fetch(`https://api.github.com/users/${username}/events/public`, {
+        headers: {
+            'Authorization': "token" + token
+        }
+    })
+        .then(response => response.json)
+}
+
+getLAstCommit('Jwatt31', GITHUB_API_KEY)
+    .then(data => {
+        console.log(data)
+        let commit = data.filter(event => event.type === 'PushEvent')
+        console.log(commit);
+        console.log(new Date(commit[0].created_at));
     })

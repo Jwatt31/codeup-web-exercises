@@ -4,18 +4,18 @@
     <title>Online Store</title>
 </head>
 <body>
-<script src="css/ajax-store.css"></script>
+<!--<script src="css/ajax-store.css"></script>-->
 
 <h1>My Tool Store</h1>
 
 <table id="products">
     <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
@@ -23,11 +23,39 @@
 <script>
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+    let listProducts = document.querySelector('#products')
+    let DAta = {
+        title:'',
+        price:'',
+        quantity:''
+    };
+    // fetch("data/inventory.json")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data)
+    //     })
+    fetch("data/inventory.json", {
+        method: 'GET'
+    })
+        .then(response => response.json())
+        .then(jsonData => console.log(jsonData))
+
+
+
+
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+    fetch("data/inventory.json", {
+        method: 'POST',
+        body: JSON.stringify(DAta)
+
+    })
+        .then(response => response.json())
+        .then(jsonData => console.log(jsonData))
+
 </script>
 
 </body>
