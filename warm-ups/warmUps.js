@@ -276,5 +276,5 @@ fetch(`https://pokeapi.co/api/v2/pokemon/onix`)
 })
 
 let onix = document.querySelector('#answer')
-let
+// let
 

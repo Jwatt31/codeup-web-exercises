@@ -1,27 +1,17 @@
 'use strict'
 
-let username = document.querySelector("#container")
-let btnuser = document.querySelector("#btnUser")
+const searchForm = document.querySelector('#search')
 
-username.addEventListener('submit', (event) => {
+searchForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    let input = document.querySelector('#username')
-    console.log(`${input} no its clafairy`)
+    let input = document.querySelector('#username').value
+    fetch(`https://api.github.com/users/${input}/events/public`)
+        .then(res => res.json())
+        .then(data => console.log(`the user ${input} updated at ${data[0].created_at}`))
 })
 
-
-fetch(`application/vnd.github+json${username}`)
-console.log(response => response.data)
-
-// Octokit.js
-// https://github.com/octokit/core.js#readme
-// const octokit = new Octokit({
-//     auth: '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'
-// })
-//
-// await octokit.request('GET /users/{username}/events', {
-//     username: 'USERNAME',
-//     headers: {
-//         'X-GitHub-Api-Version': '2022-11-28'
-//     }
-// })
+fetch(`https://api.github.com/users/Jwatt31/events/public`)
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data)
+    })
