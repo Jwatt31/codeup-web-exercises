@@ -8,30 +8,114 @@
     <title>Mapbox Map!!</title>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
-
-    <div id='map' style='width: 400px; height: 300px;'></div>
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiandhdHQzMSIsImEiOiJjbHBqeWVxMDkwNGF4MmlvMGdpMzZ4MG9zIn0.Jf1bisyszGf6qKE4OLAAQg';
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v12',
-            center: [-97.31590328046478, 32.77032242475549],
-            zoom: 9,
-        });
-
-        function geocode(search, token) {
-            var baseUrl = 'https://api.mapbox.com';
-            var endPoint = '/geocoding/v5/mapbox.places/';
-            return fetch(`${baseUrl}${endPoint}${encodeURIComponent(search)}.json?access_token=${token}`)
-                .then( res => res.json() )
-                .then( data => data.features[0].center);
-        }
-
-    </script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src="js/keys.js"></script>
+    <script src="mapbox-geocoder-utils.js"></script>
 
 </head>
 <body>
+<div>
+    <input name="zoom" class="zoom5" type="radio" onclick="changeZoom(5)"> 5 zoom
+    <input name="zoom" class="zoom15" type="radio" onclick="changeZoom(15)">15 zoom
+    <input name="zoom" class="zoom20" type="radio" onclick="changeZoom(20)">20 zoom
+</div>
+<div id='map' style='width: 600px; height: 500px;'></div>
+<script>
+    mapboxgl.accessToken = MAPBOX_API;
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-97.2490030985239, 32.8555565786836],
+        zoom: 11,
+    });
 
+    function changeZoom(zoomies) {
+        map.easeTo({zoom: zoomies})
+    }
+
+    geocode("6245 Rufe Snow Dr #250, Fort Worth, TX 76148", MAPBOX_API)
+        .then(coords => {
+            console.log(coords)
+            const ramen = new mapboxgl.Marker()
+                .setLngLat([-97.23926893945931, 32.85932708122124])
+                .addTo(map)
+            map.setCenter(coords)
+            map.setZoom(18)
+            let Ramens = new mapboxgl.Popup
+                .setHTML("<p>Ramen!!!!</p>")
+            ramen.setPopup(Ramens)
+        })
+
+    /*Markers 1-3*/
+    // const ramen = new mapboxgl.Marker()
+    //     .setLngLat([-97.23926893945931, 32.85932708122124])
+    //     .addTo(map);
+    //     const steak = new mapboxgl.Marker()
+    //         .setLngLat([-97.29324087613016, 32.84190607244222])
+    //         .addTo(map);
+    //     const allAround = new mapboxgl.Marker()
+    //         .setLngLat([-97.24179800650438, 32.846927750747874])
+    //         .addTo(map);
+    //
+    // /*popups*/
+    //     let popupRam = new mapboxgl.Popup()
+    //         .setLngLat([-97.23926893945931, 32.85932708122124])
+    //         .setHTML("<p>ITOKO SUSHI & RAMEN</p>")
+    //         .addTo(map);
+    //     let popupSteak = new mapboxgl.Popup()
+    //         .setLngLat([-97.29324087613016, 32.84190607244222])
+    //         .setHTML("<p>Texas RoadHouse</p>")
+    //         .addTo(map);
+    //     let popupAA = new mapboxgl.Popup()
+    //         .setLngLat([-97.24179800650438, 32.846927750747874])
+    //         .setHTML("<p>Babe's Chicken</p>")
+    //         .addTo(map);
+
+    let makers = [
+        {
+            long: -97.23926893945931,
+            lats:  32.85932708122124,
+            popup: '<h2>ITOKO SUSHI & RAMEN</h2> <p>A ramen place with a nice vibe</p>'
+        },
+        {
+            long: -97.29324087613016,
+            lats: 32.84190607244222,
+            popup: '<h2>Texas RoadHouse</h2> <p>A chain steakhouse with a the best butter</p>'
+        },
+        {
+            long: -97.24179800650438,
+            lats:  32.846927750747874,
+            popup: "<h2>Babe's Chicken</h2> <p>just good chiken</p>"
+        }
+    ];
+
+    makers.forEach((markers, index)=> {
+        if(index=== makers.length-1){
+            map.setCenter(makers.long, makers.lats)
+            map.setZoom(18);
+        }
+        const mark = new mapboxgl.Marker()
+                .setLngLat(makers.long, makers.lats)
+                .addto(map)
+        const pop = new mapboxgl.Marker()
+            .setHTML(
+                `<h2>${makers.popup}</h2>`
+            )
+        mark.
+    })
+
+    // makers.forEach(function (marker) {
+    //     let el = document.createElement('div');
+    //     el.className = 'marker'
+    //
+    //     new mapboxgl.Marker(el)
+    //         .setLngLat(marker.coords)
+    //         .setPopup(new mapboxgl.Popup().setHTML(marker.popup))
+    //         .addto(map)
+    // });
+
+
+    // placeMarkerAndPopup(alamoInfo, ACCESS_TOKEN, map);
+</script>
 </body>
 </html>
