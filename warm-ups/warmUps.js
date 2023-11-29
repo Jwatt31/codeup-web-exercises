@@ -278,4 +278,13 @@ fetch(`https://pokeapi.co/api/v2/pokemon/onix`)
 let onix = document.querySelector('#answer')
 // let
 
+/*-------------------------------------------------------------*/
 
+let todos = document.querySelector('#to-do-list')
+let titles = document.querySelector('#title')
+let contents = document.querySelector('#content')
+let dates = document.querySelector('#date')
+
+fetch("data/to-do.json")
+    .then(res=> res.json())
+    .then(data=> (console.log(data)))
