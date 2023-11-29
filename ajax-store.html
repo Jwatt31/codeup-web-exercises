@@ -2,6 +2,18 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+        body{
+            font-family: AppleGothic;
+            background-color: #cbffcd;
+        }
+        table, tr, td, th{
+            border: 1px solid black  ;
+        }
+        td th{
+            padding: .5em;
+        }
+    </style>
 </head>
 <body>
 <!--<script src="css/ajax-store.css"></script>-->
@@ -23,22 +35,44 @@
 <script>
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    let listProducts = document.querySelector('#products')
+    let listProducts = document.querySelector('#insertProducts');
     let DAta = {
         title:'',
         price:'',
         quantity:''
     };
-    // fetch("data/inventory.json")
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         console.log(data)
-    //     })
-    fetch("data/inventory.json", {
-        method: 'GET'
-    })
-        .then(response => response.json())
-        .then(jsonData => console.log(jsonData))
+
+   fetch("data/inventory.json")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            for (let item of data) {
+                const newRow = document.createElement("tr")
+                const title = document.createElement("td")
+                const quantity =document.createElement("td")
+                const cate =document.createElement("td")
+                const price =document.createElement("td")
+                /*----------------------------------------*/
+                title.innerHTML = item.title
+                quantity.innerHTML = item.quantity
+                cate.innerHTML = item.categories
+                price.innerHTML = item.price
+
+                newRow.appendChild(title)
+                newRow.appendChild(quantity)
+                newRow.appendChild(price)
+                newRow.appendChild(cate)
+                listProducts.appendChild(newRow)
+            }
+        })
+
+    // fetch("data/inventory.json", {
+    //     method: 'GET'
+    // })
+    //     .then(response => response.json())
+    //     .then(jsonData => console.log(jsonData))
+
+
 
 
 
@@ -48,13 +82,13 @@
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-    fetch("data/inventory.json", {
-        method: 'POST',
-        body: JSON.stringify(DAta)
-
-    })
-        .then(response => response.json())
-        .then(jsonData => console.log(jsonData))
+    // fetch("data/inventory.json", {
+    //     method: 'POST',
+    //     body: JSON.stringify(DAta)
+    //
+    // })
+    //     .then(response => response.json())
+    //     .then(jsonData => console.log(jsonData))
 
 </script>
 

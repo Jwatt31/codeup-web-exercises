@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="post"></div>
+
+<script>
+    const postsDiv = document.querySelector('#post')
+
+    fetch("data/blog.json")
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(blogPost => {
+                const postDiv = document.createElement("div")
+                postDiv.innerHTML = `
+            <h2>${blogPost.title}</h2>
+            <p>${blogPost.content}</p>
+            <p>${blogPost.date}</p>`
+
+                postsDiv.appendChild(postDiv)
+            })
+        })
+</script>
+</body>
+</html>
