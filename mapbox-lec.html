@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+  <script src="js/mapbox-geocoder-utils.js"></script>
+  <style>
+  #map {
+  /* the width and height may be set to any size */
+  width: 100%;
+  height: 700px;
+  }
+  </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<!-- Custom JS -->
+<script>
+  mapboxgl.accessToken = MAPBOX_API;
+  const map = new mapboxgl.Map({
+    /*this is setting the location of my map depending on the id in the html*/
+    container: 'map', // container ID
+    /*this is setting the mapbox style */
+    style: 'mapbox://styles/mapbox/navigation-night-v1', // style URL
+    /*this is the zoom*/
+    zoom: 10, // starting zoom
+    /*centers the map by grid cords */
+    center: [-96.80315647882033, 32.777560104836496] // [lng, lat]/*go to google maps to find the log and lad*/
+    // 32.777560104836496, -96.80315647882033 dallas
+  });
+  /*setting marker*/
+  const marker = new mapboxgl.Marker()
+          .setLngLat([-96.80315, 32.77756])
+          .addTo(map);
+
+  /*setting popup*/
+  let popup = new mapboxgl.Popup()
+          .setLngLat([-96.80315, 32.77756])
+          .setHTML("<p>Codeup Rocks!</p>")
+          .setMaxWidth()
+          .addTo(map);
+/*adds it to app*/
+  const codeupPopup = new mapboxgl.Popup()
+          .setHTML("<p>Welcome to San Antonio!</p>");
+
+  marker.setPopup(codeupPopup);
+
+  /*geocode functions*/
+
+  geocode("900 Jackson St, Dallas, TX 75202", MAPBOX_API)
+          .then(result => {console.log(result)
+            map.setCenter(result);
+            map.setZoom(10);
+
+          })
+
+
+  reverseGeocode({lng: -98.4861, lat: 29.4260}, MAPBOX_API).
+  then( results => console.log(results) );
+
+</script>
+
+</body>
+</html>
