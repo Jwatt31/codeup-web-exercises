@@ -18,6 +18,10 @@
 
 <h1>My First Mapbox Map!</h1>
 
+<label for="search">search</label>
+<input type="text" id="search">
+<button type="button" id="sub">search</button>
+
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
@@ -67,6 +71,18 @@
 
   reverseGeocode({lng: -98.4861, lat: 29.4260}, MAPBOX_API).
   then( results => console.log(results) );
+
+
+  /*search function box code*/
+
+  document.getElementById("sub").addEventListener("click", function () { /*grab the button*/
+   let Currentloca = geocode(document.getElementById("search").value, MAPBOX_API);
+
+   Currentloca.then(result => {
+     console.log(result)
+     map.setCenter([result[0], result[1]])/*calll back to the map above in this code*/
+   })
+  })
 
 </script>
 
