@@ -52,7 +52,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
             temp.innerText = weather.main.temp;
 
             weatherOutPut.appendChild(time)
-            // weatherOutPut.appendChild(temp)
+            weatherOutPut.appendChild(temp)
 
         }
 
