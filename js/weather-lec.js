@@ -24,7 +24,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
     .then(result => {
 
     console.log(result)
-    result.list.forEach( weather => {
+    // result.list.forEach( weather => {
         // const  date =new Date(weather.dt * 1000);
         // console.log(date.toLocaleDateString())
         //
@@ -58,7 +58,8 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
 
 
-    });})
+    // });
+})
 
 /*to add impeirial */
 // fetch(`https://api.openweathermap.org/data/2.5/weather?` +

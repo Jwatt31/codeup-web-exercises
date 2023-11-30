@@ -12,14 +12,14 @@
 
 
     <link rel="stylesheet" href="css/Weather_map.css">
-    <script src="js/keys.js"></script>
-    <link rel="stylesheet" href="http://openweathermap.org/img/w/icon.png"><!--not sure what i got wrong here-->
+
+<!--    <link rel="stylesheet" href="http://openweathermap.org/img/w/icon.png">&lt;!&ndash;not sure what i got wrong here&ndash;&gt;-->
 </head>
 <body>
 <!--header-->
 <nav id="nav">
     <h3 id="App">Weather App</h3>
-    <p class="currentLocation">Example</p>
+    <p class="currentLocation">Fort Worth</p>
 </nav>
 <!--test-->
 <div>
@@ -32,23 +32,13 @@
     <input type="text" id="search">
     <button type="button" id="sub">search</button>
 </div>
-<!--forecast-->
-<div class="card" style="width: 8rem;">
-    <div class="card-body">
-        <h5 class="card-title">Date</h5>
-        <p class="card-text">temp</p>
-        <h6 class="icon">Icon</h6>
-        <p class="card-text">Discrip</p>
-        <p class="card-text">Humid</p>
-        <p class="card-text">wind</p>
-        <p class="card-text">pressuer</p>
 
-    </div>
-</div>
+<div id="forecast"></div>
+
 
 <div id='map'></div>
 
-
+<script src="js/keys.js"></script>
 <script src="js/Weather_map.js"></script>
 
 </body>

@@ -13,5 +13,24 @@ body{
 }
 #searchBar{
     display: flex;
-    margin-left: 60px;
+    margin-left: 40px;
+}
+#search{
+margin: auto 6px;
+}
+#forecast{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 200px;
+    justify-content: space-around;
+}
+.Weather-Data{
+    border: solid 1px black;
+    border-radius: 5% ;
+    & h2{
+        background-color: lightgray;
+        border-radius: 10%;
+
+    }
 }
