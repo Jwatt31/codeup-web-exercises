@@ -56,6 +56,8 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
             wind.innerText = `Wind Speed${weather.wind.speed}`;
             pressuer.innerText = `Under pressure${weather.main.pressure}`;
 
+
+            /*adds them to the page*/
             weatherOutPut.appendChild(DataDiv)
             DataDiv.appendChild(time)
             DataDiv.appendChild(temp)
@@ -66,15 +68,32 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
             DataDiv.appendChild(pressuer)
             DataDiv.classList.add('Weather-Data')
 
+
+            if(Discrip.innerText === "clear sky") {
+                 DataDiv.style.backgroundImage = "url(image/sunny.jpg)"
+            } else if(Discrip.innerText === "few clouds") {
+                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
+            }else if (Discrip.innerText === "scattered clouds"){
+
+            }else if (Discrip.innerText === "broken clouds"){
+
+            }else if (Discrip.innerText === "broken clouds"){
+
+            }else if (Discrip.innerText === "broken clouds"){
+
+            }else if (Discrip.innerText === "broken clouds"){
+
+            }
+
         }
     });
 
 
-/*setting location */
+/*Search bar location */
 
 document.getElementById("sub").addEventListener("click", function () { /*grab the button*/
     let Currentloca = geocode(document.getElementById("search").value, MAPBOX_API)
-        // .then(result => result.json())
         .then(data => {
             console.log(data)
             let longitude = data[0]
@@ -191,7 +210,6 @@ function onDragEnd() {
                 pressuer.innerText = `Under pressure${weather.main.pressure}`;
 
                 weatherOutPut.appendChild(DataDiv)
-                // DataDiv.style.backgroundImage = `url(image/sunny.jpg)`
                 DataDiv.appendChild(time)
                 DataDiv.appendChild(temp)
                 DataDiv.appendChild(Discrip)
@@ -233,12 +251,24 @@ marker.on('dragend', onDragEnd);
 
 
 /*have the cards colors change based on the weather*/
-// document.querySelector('.Weather-Data.').value
-//     if (Discrip.innerText === 'clear sky'){
-//     return DataDiv.style.backgroundImage = "url(image/sunny.jpg)"
-// }else if (Discrip.innerText === 'overcast clouds'){
-//     return DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-// }
+
+// fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
+//     `lat=32.75433667827946&lon=-97.31636650243732` +
+//     `&appid=${OPEN_WEATHER_API}` + `&units=imperial`)
+//     .then(res => res.json())
+//     .then(data => {
+//         const weather = data.list
+//         let Discrip = weather.weather[0].description;
+//         let DataDiv = document.getElementsByClassName("Weather-Data")
+//
+//         if (Discrip === 'clear sky') {
+//             return DataDiv.style.backgroundImage = "url(image/sunny.jpg)"
+//         } else if (Discrip.innerText === 'overcast clouds') {
+//             return DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+//         }
+//     })
+
+
 
 
 // if (Discrip.innerText === 'clear sky'){

@@ -35,6 +35,7 @@ margin: auto 6px;
     background-color: aqua ;
     opacity: 80%;
     width: 170px;
+    background-size: cover;
 
 
     & h2{
