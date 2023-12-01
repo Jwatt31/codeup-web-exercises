@@ -28,12 +28,44 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
     `&appid=${OPEN_WEATHER_API}` + `&units=imperial`)
     .then(data => data.json())
     .then(result => {
-        const date = new Date(result.dt * 1000);
-        console.log(date.toLocaleDateString())
-        console.log(result)
-        /*add in appends so these appear and disapper when search is made*/
+        const day = result.list
+        for (let i = 0; i < 40; i += 8 ) {/*40 because thats how many 3 hour cycals there are in a 3 day */
+            const weather = day[i]
+            const  date =new Date(weather.dt * 1000)
+        // console.log(date.toLocaleDateString())
+        // console.log(result)
 
-    });
+        /*add in appends so these appear and disapper when search is made*/
+        let DataDiv = document.createElement('div');
+        let time = document.createElement('h2')
+        let temp = document.createElement('p')
+        let Icon = document.createElement('img')
+        let Discrip = document.createElement('p')
+        let Humid = document.createElement('p')
+        let wind = document.createElement('p')
+        let pressuer = document.createElement('p')
+
+        /*creates the content in the cards*/
+        time.innerText = `${date.toLocaleDateString()}`
+        temp.innerText = `\u00B0F ${weather.main.temp_max} / \u00B0F ${weather.main.temp_min} `; /*weather.main.temp_min*/
+        Icon.src=`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
+        Discrip.innerText = weather.weather[0].description;
+        Humid.innerText = `Humidity ${weather.main.humidity}`;
+        wind.innerText = `Wind Speed${weather.wind.speed}`;
+        pressuer.innerText = `Under pressure${weather.main.pressure}`;
+
+        weatherOutPut.appendChild(DataDiv)
+        DataDiv.appendChild(time)
+        DataDiv.appendChild(temp)
+        DataDiv.appendChild(Discrip)
+        DataDiv.appendChild(Icon)
+        DataDiv.appendChild(Humid)
+        DataDiv.appendChild(wind)
+        DataDiv.appendChild(pressuer)
+        DataDiv.classList.add('Weather-Data')
+
+    }});
+
 
 
 /*setting location */
@@ -55,18 +87,21 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
                 .then(data => {
                     console.log(data)
 
+                    /*deleates the existing tags*/
+                    weatherOutPut.innerHTML= ''
+
                     const day = data.list
                     for (let i = 0; i < 40; i += 8 ) {/*40 because thats how many 3 hour cycals there are in a 3 day */
                         const weather = day[i]
-
                         const  date =new Date(weather.dt * 1000);
                         // console.log(date.toLocaleDateString()
                         // ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
                         // when asked for a state you get overlapping cards if time input an if statment to limet the cards that appear
 
 
-                        const DataDiv = document.createElement('div');
 
+                        /*Creates the Tags to be populated*/
+                        const DataDiv = document.createElement('div');
                         const time = document.createElement('h2')
                         const temp = document.createElement('p')
                         const Icon = document.createElement('img')
@@ -75,9 +110,10 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
                         const wind = document.createElement('p')
                         const pressuer = document.createElement('p')
 
+                        /*creates the content in the cards*/
                         time.innerText = `${date.toLocaleDateString()}`
                         temp.innerText = `\u00B0F ${weather.main.temp_max} / \u00B0F ${weather.main.temp_min} `; /*weather.main.temp_min*/
-                        // icon.innerText = weather.main.temp;
+                        Icon.src=`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
                         Discrip.innerText = weather.weather[0].description;
                         Humid.innerText = `Humidity ${weather.main.humidity}`;
                         wind.innerText = `Wind Speed${weather.wind.speed}`;
@@ -87,15 +123,14 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
                         DataDiv.appendChild(time)
                         DataDiv.appendChild(temp)
                         DataDiv.appendChild(Discrip)
-                        // weatherOutPut.appendChild(temp)
+                        DataDiv.appendChild(Icon)
                         DataDiv.appendChild(Humid)
                         DataDiv.appendChild(wind)
                         DataDiv.appendChild(pressuer)
 
+                        /*sets the class*/
+
                         DataDiv.classList.add('Weather-Data')
-                        if (DataDiv.length){
-                            DataDiv[0].parentNode.removeChild()
-                        }
 
 
                         /*need to add a remove function*/
@@ -109,6 +144,13 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
         })
 
 })
+
+/*making marker and moving that marker when dragged*/
+
+const mapMarker = new mapboxgl.Marker({
+
+})
+
 
 
 /*Dark mode add in */

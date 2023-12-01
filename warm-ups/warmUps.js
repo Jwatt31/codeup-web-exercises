@@ -265,26 +265,76 @@ let num = 100
 //     console.log('FizzBuzz')
 
 //nov 28 2023 warm up
- let imgs = document.querySelector('.image')
-// let newpara = document.querySelector('#Pokemon')/*adding anything to the div will replace the img*/
+//  let imgs = document.querySelector('.image')
+// // let newpara = document.querySelector('#Pokemon')/*adding anything to the div will replace the img*/
+//
+// fetch(`https://pokeapi.co/api/v2/pokemon/onix`)
+// .then(res => res.json())
+// .then(data => {
+//     imgs.src =data.sprites.front_shiny/*i can put this directly to the imgage class because its an image */
+//
+// })
+//
+// let onix = document.querySelector('#answer')
+// // let
+//
+// /*-------------------------------------------------------------*/
+//
+// let todos = document.querySelector('#to-do-list')
+// let titles = document.querySelector('#title')
+// let contents = document.querySelector('#content')
+// let dates = document.querySelector('#date')
+//
+// fetch("data/to-do.json")
+//     .then(res=> res.json())
+//     .then(data=> (console.log(data)))
+//
 
-fetch(`https://pokeapi.co/api/v2/pokemon/onix`)
-.then(res => res.json())
-.then(data => {
-    imgs.src =data.sprites.front_shiny/*i can put this directly to the imgage class because its an image */
+function diagonalDifference(arr1) {
+    const result = []
+    arr1.map(0)
+    for (let i = 0; i < arr.length; i++) {
+        const sum = arr[i]
+        result.push(sum);
+    }
+    return result
+}
 
-})
+diagonalDifferences([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 8]
+])
 
-let onix = document.querySelector('#answer')
-// let
+// let array = {[1,2,3],[4,5,6],[7,9,8]}
 
-/*-------------------------------------------------------------*/
+function diagonalDifferences(arr) {
+    let LRarray =[]
+    let RLarray =[]
+    let LRsum = 0
+    let RLsum = 0
+    arr.map((num, index) => {
+            // console.log(num);
+            // console.log(index);
+            // console.log(num[index]);
+            LRarray.push(num[index]);
 
-let todos = document.querySelector('#to-do-list')
-let titles = document.querySelector('#title')
-let contents = document.querySelector('#content')
-let dates = document.querySelector('#date')
+        }
+    )
+    console.log(LRarray)
+    arr.reverse().map((num,index) =>{
+        // console.log(num)
+        // console.log(index)
+        // console.log(num[index])
+        RLarray.push(num[index])
+    })
+    console.log(RLarray)
+    LRarray.forEach((num)=> {
+        LRsum += num;
+    })
+    console.log(LRsum)
+    RLarray.forEach((num) => RLsum += num)
+    console.log(RLsum)
+    console.log(Math.abs(LRsum - RLsum))
 
-fetch("data/to-do.json")
-    .then(res=> res.json())
-    .then(data=> (console.log(data)))
+}

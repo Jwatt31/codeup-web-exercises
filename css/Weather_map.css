@@ -4,6 +4,7 @@
 }
 body{
     /*background-color: black;*/
+
 }
 #nav{
     display: flex;
@@ -22,15 +23,37 @@ margin: auto 6px;
     display: flex;
     flex-direction: row;
     width: auto;
-    height: 200px;
+    height: 300px;
     justify-content: space-around;
+    margin: 2px 2px;
 }
+
+/*cards design*/
 .Weather-Data{
     border: solid 1px black;
     border-radius: 5% ;
+    background-color: aqua ;
+    opacity: 80%;
+    width: 170px;
+
     & h2{
         background-color: lightgray;
         border-radius: 10%;
+        font-family: "JetBrains Mono" ;
+        text-align: center;
 
     }
+    & p{
+        text-align: center;
+        font-family: "JetBrains Mono" ;
+        border-top: 1px solid slategray ;
+
+    }
+    & img{
+        margin-left: 35%;
+        font-family: "JetBrains Mono" ;
+
+
+    }
+
 }
