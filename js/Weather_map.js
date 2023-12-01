@@ -70,19 +70,38 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
 
             if(Discrip.innerText === "clear sky") {
-                 DataDiv.style.backgroundImage = "url(image/sunny.jpg)"
+                 DataDiv.style.backgroundImage = "url(image/sun.jpg)"
             } else if(Discrip.innerText === "few clouds") {
                  DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
                 DataDiv.style.color = 'white'
             }else if (Discrip.innerText === "scattered clouds"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
 
             }else if (Discrip.innerText === "broken clouds"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
 
-            }else if (Discrip.innerText === "broken clouds"){
+            }else if (Discrip.innerText === "light rain"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
+                
+            }else if (Discrip.innerText === "heavy intensity rain"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
 
-            }else if (Discrip.innerText === "broken clouds"){
+            }else if (Discrip.innerText === "light snow"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
 
-            }else if (Discrip.innerText === "broken clouds"){
+            }else if (Discrip.innerText === "snow"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
+                
+
+            }else if (Discrip.innerText === "moderate rain"){
+                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+                DataDiv.style.color = 'white'
 
             }
 
