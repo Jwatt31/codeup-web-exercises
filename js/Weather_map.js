@@ -70,38 +70,43 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
 
             if(Discrip.innerText === "clear sky") {
-                 DataDiv.style.backgroundImage = "url(image/sun.jpg)"
+                DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
+
             } else if(Discrip.innerText === "few clouds") {
-                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
-            }else if (Discrip.innerText === "scattered clouds"){
                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
+
+            }else if (Discrip.innerText === "scattered clouds"){
+                DataDiv.style.backgroundImage = "url(image/scat-clouds.jpg)"
+
 
             }else if (Discrip.innerText === "broken clouds"){
-                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
+                DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
+
 
             }else if (Discrip.innerText === "light rain"){
-                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
-                
+                DataDiv.style.backgroundImage = "url(image/light-rain.jpg)"
+
+
             }else if (Discrip.innerText === "heavy intensity rain"){
-                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
+                DataDiv.style.backgroundImage = "url(image/rain.jpg)"
+
 
             }else if (Discrip.innerText === "light snow"){
-                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
+                DataDiv.style.backgroundImage = "url(image/light-snow.jpg)"
+
 
             }else if (Discrip.innerText === "snow"){
-                DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
-                
+                DataDiv.style.backgroundImage = "url(image/snow.jpg)"
+
+
 
             }else if (Discrip.innerText === "moderate rain"){
                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-                DataDiv.style.color = 'white'
+
+
+            }else if (Discrip.innerText === "overcast clouds") {
+                DataDiv.style.backgroundImage = "url(image/dark-over-clouds.jpg)"
+
 
             }
 
@@ -167,6 +172,46 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
 
 
                         /*need to add a remove function*/
+                        if(Discrip.innerText === "clear sky") {
+                            DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
+
+                        } else if(Discrip.innerText === "few clouds") {
+                            DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+
+                        }else if (Discrip.innerText === "scattered clouds"){
+                            DataDiv.style.backgroundImage = "url(image/scat-clouds.jpg)"
+
+
+                        }else if (Discrip.innerText === "broken clouds"){
+                            DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
+
+
+                        }else if (Discrip.innerText === "light rain"){
+                            DataDiv.style.backgroundImage = "url(image/light-rain.jpg)"
+
+
+                        }else if (Discrip.innerText === "heavy intensity rain"){
+                            DataDiv.style.backgroundImage = "url(image/rain.jpg)"
+
+
+                        }else if (Discrip.innerText === "light snow"){
+                            DataDiv.style.backgroundImage = "url(image/light-snow.jpg)"
+
+
+                        }else if (Discrip.innerText === "snow"){
+                            DataDiv.style.backgroundImage = "url(image/snow.jpg)"
+
+
+
+                        }else if (Discrip.innerText === "moderate rain"){
+                            DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+
+
+                        }else if (Discrip.innerText === "overcast clouds") {
+                            DataDiv.style.backgroundImage = "url(image/dark-over-clouds.jpg)"
+
+
+                        }
 
 
                     }
@@ -243,6 +288,47 @@ function onDragEnd() {
 
 
                 /*need to add a remove function*/
+                if(Discrip.innerText === "clear sky") {
+                    DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
+                    DataDiv.style.color='black'
+
+                } else if(Discrip.innerText === "few clouds") {
+                    DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+
+                }else if (Discrip.innerText === "scattered clouds"){
+                    DataDiv.style.backgroundImage = "url(image/scat-clouds.jpg)"
+
+
+                }else if (Discrip.innerText === "broken clouds"){
+                    DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
+
+
+                }else if (Discrip.innerText === "light rain"){
+                    DataDiv.style.backgroundImage = "url(image/light-rain.jpg)"
+
+
+                }else if (Discrip.innerText === "heavy intensity rain"){
+                    DataDiv.style.backgroundImage = "url(image/rain.jpg)"
+
+
+                }else if (Discrip.innerText === "light snow"){
+                    DataDiv.style.backgroundImage = "url(image/light-snow.jpg)"
+
+
+                }else if (Discrip.innerText === "snow"){
+                    DataDiv.style.backgroundImage = "url(image/snow.jpg)"
+
+
+
+                }else if (Discrip.innerText === "moderate rain"){
+                    DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
+
+
+                }else if (Discrip.innerText === "overcast clouds") {
+                    DataDiv.style.backgroundImage = "url(image/dark-over-clouds.jpg)"
+
+
+                }
             }
         })
 }
@@ -296,3 +382,7 @@ marker.on('dragend', onDragEnd);
 //     return DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 // }
 
+setTimeout(() => {
+    const e = document.querySelector('.animate');
+    e.style.setProperty('--background-color', 'blue');
+}, 2000);

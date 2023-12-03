@@ -36,10 +36,11 @@ margin: auto 6px;
     opacity: 80%;
     width: 170px;
     background-size: cover;
+    color: whitesmoke;
 
 
     & h2{
-        background-color: lightgray;
+        background-color: blue;
         border-radius: 2%;
         font-family: "JetBrains Mono" ;
         text-align: center;
@@ -72,4 +73,29 @@ margin: auto 6px;
     line-height: 18px;
     border-radius: 3px;
     display: none;
+}
+:root {
+    --background-color: orange;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+        background-color: var(--background-color);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+.animate {
+    animation: flip 5s infinite;
+
+    width: 100vw;
+    height: 100vh;
 }
