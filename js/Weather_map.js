@@ -49,7 +49,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
             /*creates the content in the cards*/
             time.innerText = `${date.toLocaleDateString()}`
-            temp.innerText = `\u00B0F ${weather.main.temp_max} / \u00B0F ${weather.main.temp_min} `; /*weather.main.temp_min*/
+            temp.innerText = `${weather.main.temp_max}\u00B0F / ${weather.main.temp_min}\u00B0F `; /*weather.main.temp_min*/
             Icon.src = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
             Discrip.innerText = weather.weather[0].description;
             Humid.innerText = `Humidity ${weather.main.humidity}`;
@@ -71,6 +71,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
             if(Discrip.innerText === "clear sky") {
                 DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
+                DataDiv.style.color='DimGray'
 
             } else if(Discrip.innerText === "few clouds") {
                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
@@ -81,6 +82,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
             }else if (Discrip.innerText === "broken clouds"){
                 DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
+                DataDiv.style.color='black'
 
 
             }else if (Discrip.innerText === "light rain"){
@@ -150,7 +152,7 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
 
                         /*creates the content in the cards*/
                         time.innerText = `${date.toLocaleDateString()}`
-                        temp.innerText = `\u00B0F ${weather.main.temp_max} / \u00B0F ${weather.main.temp_min} `; /*weather.main.temp_min*/
+                        temp.innerText = ` ${weather.main.temp_max}\u00B0F / ${weather.main.temp_min}\u00B0F `; /*weather.main.temp_min*/
                         Icon.src = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
                         Discrip.innerText = weather.weather[0].description;
                         Humid.innerText = `Humidity ${weather.main.humidity}`;
@@ -174,6 +176,7 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
                         /*need to add a remove function*/
                         if(Discrip.innerText === "clear sky") {
                             DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
+                            DataDiv.style.color='DimGray'
 
                         } else if(Discrip.innerText === "few clouds") {
                             DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
@@ -184,6 +187,7 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
 
                         }else if (Discrip.innerText === "broken clouds"){
                             DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
+                            DataDiv.style.color='DimGray'
 
 
                         }else if (Discrip.innerText === "light rain"){
@@ -266,7 +270,7 @@ function onDragEnd() {
 
                 /*creates the content in the cards*/
                 time.innerText = `${date.toLocaleDateString()}`
-                temp.innerText = `\u00B0F ${weather.main.temp_max} / \u00B0F ${weather.main.temp_min} `; /*weather.main.temp_min*/
+                temp.innerText = `${weather.main.temp_max}\u00B0F /  ${weather.main.temp_min}\u00B0F `; /*weather.main.temp_min*/
                 Icon.src = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
                 Discrip.innerText = weather.weather[0].description;
                 Humid.innerText = `Humidity ${weather.main.humidity}`;
@@ -290,8 +294,7 @@ function onDragEnd() {
                 /*need to add a remove function*/
                 if(Discrip.innerText === "clear sky") {
                     DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
-                    DataDiv.style.color='black'
-
+                    DataDiv.style.color='DimGray'
                 } else if(Discrip.innerText === "few clouds") {
                     DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
@@ -301,6 +304,7 @@ function onDragEnd() {
 
                 }else if (Discrip.innerText === "broken clouds"){
                     DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
+                    DataDiv.style.color='DimGray'
 
 
                 }else if (Discrip.innerText === "light rain"){
@@ -386,3 +390,51 @@ setTimeout(() => {
     const e = document.querySelector('.animate');
     e.style.setProperty('--background-color', 'blue');
 }, 2000);
+
+/*add a fade in option with the cards */
+
+//CSS
+/*
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    -webkit-animation: fadein 2s; /!* Safari, Chrome and Opera > 12.1 *!/
+    -moz-animation: fadein 2s; /!* Firefox < 16 *!/
+    -ms-animation: fadein 2s; /!* Internet Explorer *!/
+    -o-animation: fadein 2s; /!* Opera < 12.1 *!/
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/!* Firefox < 16 *!/
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/!* Safari, Chrome and Opera > 12.1 *!/
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/!* Internet Explorer *!/
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/!* Opera < 12.1 *!/
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+*/
+
+
