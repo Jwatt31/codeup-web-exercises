@@ -1,6 +1,6 @@
 'use strict'
 
-import randomNumber from "./number-utils-lec.js";
+import randomNumber from "./js/number-utils-lec.js";
 
 export function rollD6(){
     return randomNumber(1, 6);
