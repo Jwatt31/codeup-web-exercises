@@ -1,19 +1,10 @@
 "use strict"
+import {geocode} from "./mapbox-geocoder-utils";
+
 /*codes and calls*/
 const coordinates = document.getElementById('coordinates');
 const weatherOutPut = document.querySelector('#forecast')
 mapboxgl.accessToken = MAPBOX_API;
-
-
-/*Geocode */
-
-function geocode(search, token) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(`${baseUrl}${endPoint}${encodeURIComponent(search)}.json?access_token=${token}`)
-        .then(res => res.json())
-        .then(data => data.features[0].center);
-}
 
 /*weather map fetch and map*/
 
@@ -34,8 +25,6 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
         for (let i = 0; i < 40; i += 8) {/*40 because thats how many 3 hour cycals there are in a 3 day */
             const weather = day[i]
             const date = new Date(weather.dt * 1000)
-            // console.log(date.toLocaleDateString())
-            // console.log(result)
 
             /*add in appends so these appear and disapper when search is made*/
             let DataDiv = document.createElement('div');
@@ -69,44 +58,43 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
             DataDiv.classList.add('Weather-Data')
 
 
-            if(Discrip.innerText === "clear sky") {
+            if (Discrip.innerText === "clear sky") {
                 DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
-                DataDiv.style.color='DimGray'
+                DataDiv.style.color = 'DimGray'
 
-            } else if(Discrip.innerText === "few clouds") {
+            } else if (Discrip.innerText === "few clouds") {
                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
-            }else if (Discrip.innerText === "scattered clouds"){
+            } else if (Discrip.innerText === "scattered clouds") {
                 DataDiv.style.backgroundImage = "url(image/scat-clouds.jpg)"
 
 
-            }else if (Discrip.innerText === "broken clouds"){
+            } else if (Discrip.innerText === "broken clouds") {
                 DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
-                DataDiv.style.color='black'
+                DataDiv.style.color = 'black'
 
 
-            }else if (Discrip.innerText === "light rain"){
+            } else if (Discrip.innerText === "light rain") {
                 DataDiv.style.backgroundImage = "url(image/light-rain.jpg)"
 
 
-            }else if (Discrip.innerText === "heavy intensity rain"){
+            } else if (Discrip.innerText === "heavy intensity rain") {
                 DataDiv.style.backgroundImage = "url(image/rain.jpg)"
 
 
-            }else if (Discrip.innerText === "light snow"){
+            } else if (Discrip.innerText === "light snow") {
                 DataDiv.style.backgroundImage = "url(image/light-snow.jpg)"
 
 
-            }else if (Discrip.innerText === "snow"){
+            } else if (Discrip.innerText === "snow") {
                 DataDiv.style.backgroundImage = "url(image/snow.jpg)"
 
 
-
-            }else if (Discrip.innerText === "moderate rain"){
+            } else if (Discrip.innerText === "moderate rain") {
                 DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
 
-            }else if (Discrip.innerText === "overcast clouds") {
+            } else if (Discrip.innerText === "overcast clouds") {
                 DataDiv.style.backgroundImage = "url(image/dark-over-clouds.jpg)"
 
 
@@ -174,44 +162,43 @@ document.getElementById("sub").addEventListener("click", function () { /*grab th
 
 
                         /*need to add a remove function*/
-                        if(Discrip.innerText === "clear sky") {
+                        if (Discrip.innerText === "clear sky") {
                             DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
-                            DataDiv.style.color='DimGray'
+                            DataDiv.style.color = 'DimGray'
 
-                        } else if(Discrip.innerText === "few clouds") {
+                        } else if (Discrip.innerText === "few clouds") {
                             DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
-                        }else if (Discrip.innerText === "scattered clouds"){
+                        } else if (Discrip.innerText === "scattered clouds") {
                             DataDiv.style.backgroundImage = "url(image/scat-clouds.jpg)"
 
 
-                        }else if (Discrip.innerText === "broken clouds"){
+                        } else if (Discrip.innerText === "broken clouds") {
                             DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
-                            DataDiv.style.color='DimGray'
+                            DataDiv.style.color = 'DimGray'
 
 
-                        }else if (Discrip.innerText === "light rain"){
+                        } else if (Discrip.innerText === "light rain") {
                             DataDiv.style.backgroundImage = "url(image/light-rain.jpg)"
 
 
-                        }else if (Discrip.innerText === "heavy intensity rain"){
+                        } else if (Discrip.innerText === "heavy intensity rain") {
                             DataDiv.style.backgroundImage = "url(image/rain.jpg)"
 
 
-                        }else if (Discrip.innerText === "light snow"){
+                        } else if (Discrip.innerText === "light snow") {
                             DataDiv.style.backgroundImage = "url(image/light-snow.jpg)"
 
 
-                        }else if (Discrip.innerText === "snow"){
+                        } else if (Discrip.innerText === "snow") {
                             DataDiv.style.backgroundImage = "url(image/snow.jpg)"
 
 
-
-                        }else if (Discrip.innerText === "moderate rain"){
+                        } else if (Discrip.innerText === "moderate rain") {
                             DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
 
-                        }else if (Discrip.innerText === "overcast clouds") {
+                        } else if (Discrip.innerText === "overcast clouds") {
                             DataDiv.style.backgroundImage = "url(image/dark-over-clouds.jpg)"
 
 
@@ -253,10 +240,6 @@ function onDragEnd() {
             for (let i = 0; i < 40; i += 8) {/*40 because thats how many 3 hour cycals there are in a 3 day */
                 const weather = day[i]
                 const date = new Date(weather.dt * 1000);
-                // console.log(date.toLocaleDateString()
-                // ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
-                // when asked for a state you get overlapping cards if time input an if statment to limet the cards that appear
-
 
                 /*Creates the Tags to be populated*/
                 const DataDiv = document.createElement('div');
@@ -292,43 +275,42 @@ function onDragEnd() {
 
 
                 /*need to add a remove function*/
-                if(Discrip.innerText === "clear sky") {
+                if (Discrip.innerText === "clear sky") {
                     DataDiv.style.backgroundImage = "url(image/clear-ligt.jpg)"
-                    DataDiv.style.color='DimGray'
-                } else if(Discrip.innerText === "few clouds") {
+                    DataDiv.style.color = 'DimGray'
+                } else if (Discrip.innerText === "few clouds") {
                     DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
-                }else if (Discrip.innerText === "scattered clouds"){
+                } else if (Discrip.innerText === "scattered clouds") {
                     DataDiv.style.backgroundImage = "url(image/scat-clouds.jpg)"
 
 
-                }else if (Discrip.innerText === "broken clouds"){
+                } else if (Discrip.innerText === "broken clouds") {
                     DataDiv.style.backgroundImage = "url(image/broken-clouds.jpg)"
-                    DataDiv.style.color='DimGray'
+                    DataDiv.style.color = 'DimGray'
 
 
-                }else if (Discrip.innerText === "light rain"){
+                } else if (Discrip.innerText === "light rain") {
                     DataDiv.style.backgroundImage = "url(image/light-rain.jpg)"
 
 
-                }else if (Discrip.innerText === "heavy intensity rain"){
+                } else if (Discrip.innerText === "heavy intensity rain") {
                     DataDiv.style.backgroundImage = "url(image/rain.jpg)"
 
 
-                }else if (Discrip.innerText === "light snow"){
+                } else if (Discrip.innerText === "light snow") {
                     DataDiv.style.backgroundImage = "url(image/light-snow.jpg)"
 
 
-                }else if (Discrip.innerText === "snow"){
+                } else if (Discrip.innerText === "snow") {
                     DataDiv.style.backgroundImage = "url(image/snow.jpg)"
 
 
-
-                }else if (Discrip.innerText === "moderate rain"){
+                } else if (Discrip.innerText === "moderate rain") {
                     DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
 
 
-                }else if (Discrip.innerText === "overcast clouds") {
+                } else if (Discrip.innerText === "overcast clouds") {
                     DataDiv.style.backgroundImage = "url(image/dark-over-clouds.jpg)"
 
 
@@ -342,99 +324,10 @@ marker.on('dragend', onDragEnd);
 
 /*Dark mode add in */
 
-// function switchToDarkModeIfNeeded() {
-//     let currentDate = new Date();
-//     let currentHour = currentDate.getHours();
-//     if (currentHour >= 14) {
-//         document.body.classList.add ('dark-mode');
-//     }else {
-//         document.body.classList.remove('dark-mode');
-//     }
-// }
-//
-// setInterval(switchToDarkModeIfNeeded, 6000);
-
-// setTimeout()
-
-/*location in header*/
-
-
-/*have the cards colors change based on the weather*/
-
-// fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
-//     `lat=32.75433667827946&lon=-97.31636650243732` +
-//     `&appid=${OPEN_WEATHER_API}` + `&units=imperial`)
-//     .then(res => res.json())
-//     .then(data => {
-//         const weather = data.list
-//         let Discrip = weather.weather[0].description;
-//         let DataDiv = document.getElementsByClassName("Weather-Data")
-//
-//         if (Discrip === 'clear sky') {
-//             return DataDiv.style.backgroundImage = "url(image/sunny.jpg)"
-//         } else if (Discrip.innerText === 'overcast clouds') {
-//             return DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-//         }
-//     })
-
-
-
-
-// if (Discrip.innerText === 'clear sky'){
-//     return DataDiv.style.backgroundImage = "url(image/sunny.jpg)"
-// }else if (Discrip.innerText === 'overcast clouds'){
-//     return DataDiv.style.backgroundImage = "url(image/Cloudy.jpg)"
-// }
-
 setTimeout(() => {
     const e = document.querySelector('.animate');
     e.style.setProperty('--background-color', 'blue');
 }, 2000);
 
-/*add a fade in option with the cards */
-
-//CSS
-/*
-#test p {
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
-
-    -webkit-animation: fadein 2s; /!* Safari, Chrome and Opera > 12.1 *!/
-    -moz-animation: fadein 2s; /!* Firefox < 16 *!/
-    -ms-animation: fadein 2s; /!* Internet Explorer *!/
-    -o-animation: fadein 2s; /!* Opera < 12.1 *!/
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/!* Firefox < 16 *!/
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/!* Safari, Chrome and Opera > 12.1 *!/
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/!* Internet Explorer *!/
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/!* Opera < 12.1 *!/
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-*/
 
 

@@ -14,3 +14,7 @@ console.log(rollD20())
 console.log(rollD6())
 
 // export { rollD6, rollD20 }
+
+for (let i = 0; i < candel.length; i++) {
+    
+}
