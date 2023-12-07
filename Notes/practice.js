@@ -412,7 +412,12 @@
 //
 // console.log(newarry(arry))
 /*takes in a string and returns it reversed*/
-function nuwString(x) {
-    let words = x.split('')
-
-}
+//
+/*splash screen*/
+var splashScreen = document.querySelector('.splash');
+splashScreen.addEventListener('click',()=>{
+    splashScreen.style.opacity = 0;
+    setTimeout(()=>{
+        splashScreen.classList.add('hidden')
+    },610)
+})
