@@ -1,6 +1,13 @@
+// import {geocode} from "./mapbox-geocoder-utils";
+function geocode(search, token) {
+    let baseUrl = 'https://api.mapbox.com';
+    let endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(`${baseUrl}${endPoint}${encodeURIComponent(search)}.json?access_token=${token}`)
+        .then( res => res.json() )
+        // to get all the data from the request, comment out the following three lines...
+        .then( data => data.features[0].center);
+}
 "use strict"
-import {geocode} from "./mapbox-geocoder-utils";
-
 /*codes and calls*/
 const coordinates = document.getElementById('coordinates');
 const weatherOutPut = document.querySelector('#forecast')
@@ -107,7 +114,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 /*Search bar location */
 
 document.getElementById("sub").addEventListener("click", function () { /*grab the button*/
-    let Currentloca = geocode(document.getElementById("search").value, MAPBOX_API)
+    /*let Currentloca =*/ geocode(document.getElementById("search").value, MAPBOX_API)
         .then(data => {
             console.log(data)
             let longitude = data[0]
@@ -324,10 +331,21 @@ marker.on('dragend', onDragEnd);
 
 /*Dark mode add in */
 
-setTimeout(() => {
-    const e = document.querySelector('.animate');
-    e.style.setProperty('--background-color', 'blue');
-}, 2000);
+// setTimeout(() => {
+//     const e = document.querySelector('.animate');
+//     e.style.setProperty('--background-color', 'blue');
+// }, 2000);
 
+/*splash remover*/
 
+let splashScreen = document.querySelector('.splash');
+splashScreen.addEventListener('click',()=>{
+    splashScreen.style.opacity = 9999;
+    setTimeout(()=>{
+        splashScreen.classList.add('hidden')
+    },650)
+})
 
+setTimeout(()=>{
+
+},6000)

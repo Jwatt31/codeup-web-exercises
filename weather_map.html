@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>weather</title>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -14,20 +14,28 @@
 
     <link rel="stylesheet" href="css/Weather_map.css">
 
-<!--    <link rel="stylesheet" href="http://openweathermap.org/img/w/icon.png">&lt;!&ndash;not sure what i got wrong here&ndash;&gt;-->
+    <!--    <link rel="stylesheet" href="http://openweathermap.org/img/w/icon.png">&lt;!&ndash;not sure what i got wrong here&ndash;&gt;-->
 </head>
 <body>
+
+<!--splash page-->
+<div class="splash">
+    <h1 class="splash-header">The Weather Forcast today is!</h1>
+</div>
+
 <!--header-->
 <nav id="nav">
     <h3 id="App">Weather App</h3>
     <p class="currentLocation">Fort Worth</p>
 </nav>
+
 <!--test-->
 <div>
     <span class="owm owm-200"></span>
 </div>
 <!--search bar-->
 <br>
+
 <div id="searchBar">
     <label for="search"></label>
     <input type="text" id="search">
@@ -35,11 +43,16 @@
 </div>
 
 <div id="forecast"></div>
-
-
+<div id="selfCastCitys">
+    <h4 id="LA">Los Angelas</h4>
+    <h4 id="DFW">Dallas</h4>
+    <h4 id="NY">New York</h4>
+</div>
+<!--<div class="animate"/>-->
+<!--map-->
 <div id='map'></div>
 <pre id="coordinates" class="coordinates"></pre>
-<div class="animate" />
+
 
 <script src="js/keys.js"></script>
 <script src="js/Weather_map.js"></script>

@@ -3,7 +3,7 @@
     height: 700px;
 }
 body{
-    background-color: #fad9cf;
+    /*background-color: #fad9cf;*/
 
 
 
@@ -101,4 +101,49 @@ body {
 
     width: 100vw;
     height: 100vh;
+}
+
+/*splash page */
+
+.splashcont{
+    background-color: rgba(100,201,154);
+    /*padding : 0;*/
+    /*margin : ;*/
+    border : 2px solid white;
+    display : grid;
+    width : 70%;
+}
+.splash{
+    cursor : pointer;
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    height : 100%;
+    width : 100%;
+    transform : translate(-50%,-50%);
+    background-color: rgba(0,0,0);
+    transition : all ease-in-out 600ms;
+    z-index: 1;
+    background-size: cover;
+}
+.hidden{
+    transition : 0.5s;
+    display : none;
+}
+.splash-header {
+    height : 90%;
+    color : white;
+    font-family : consolas;
+    font-size : 30px;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+
+#selfCastCitys{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #9ED7EE;
+
 }
